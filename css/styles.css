@@ -97,6 +97,11 @@ a:hover {
 
 .row {
     display: flex;
+
+    
+}
+.row1 {
+    display: flex;
     
 }
 
@@ -116,12 +121,7 @@ a:hover {
     z-index: 1;
     
 }
-.column3 {
-    flex: 40%;
-    padding: 0px;
-    height: 400px;  
 
-}
 .mental-right {
     width: 80%; /* Makes image fill its container */
     height: 220px; /* Maintains aspect ratio */
@@ -452,88 +452,135 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 10px;
-
-}
-
 /* Testimonials Section */
 .testimonials {
-    background-color: var(--secondary);
     padding: 4rem 0;
-}
-
-.testimonial-slider {
+    background-color: #f8f9fa;
+  }
+  
+  .section-header {
+    text-align: start;
+    margin-bottom: 0rem;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
-}
-
-.slider-container {
+  }
+  
+  
+  .testimonial-slider {
+    width: 100%;
+  }
+  
+  .slider-container {
     display: flex;
-    transition: transform 0.5s ease;
-    width: 400%; /* 4 testimonials = 400% width */
-}
-
-.testimonial {
-    flex: 0 0 25%; /* Each testimonial takes 25% width (4 columns) */
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem; /* Space for scrollbar */
+  }
+  
+  .testimonial {
+    flex: 0 0 calc(50% - 1rem);
+    scroll-snap-align: start;
+    background: rgb(180, 125, 171);
     padding: 2rem;
-    background-color: var(--white);
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 0 10px;
-}
-
-.testimonial img {
+    
+  }
+  .testimonial1 {
+    flex: 0 0 calc(50% - 1rem);
+    scroll-snap-align: start;
+    background: rgb(114, 88, 112);
+    padding: 2rem;
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .testimonial img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 1rem;
-    border: 3px solid var(--primary);
-}
-
-.slider-controls {
+    border: 3px solid #4DB6AC;
+  }
+  .testimonial1 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 3px solid #4DB6AC;
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #eee6e6;
+  }
+  .testimonial1 p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #f5f2f2;
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+    color: #0e1312;
+  }
+  
+  /* Slider Controls */
+  .slider-controls {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-top: 2rem;
     gap: 20px;
-}
-
-.slider-arrow {
-    background: var(--primary);
+    margin: -2rem 0rem 0rem -25rem;
+  }
+  
+  .slider-arrow {
+    background: #4DB6AC;
     color: white;
     border: none;
     padding: 8px 16px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.2rem;
-}
-
-.slider-dots {
+    transition: all 0.3s ease;
+  }
+  
+  .slider-arrow:hover {
+    background: #3a8a7f;
+  }
+  
+  .slider-dots {
     display: flex;
     gap: 10px;
-}
-
-.slider-dot {
+  }
+  
+  .slider-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: var(--white);
-    opacity: 0.5;
+    background-color: #ddd;
     cursor: pointer;
-    transition: var(--transition);
-}
+    transition: all 0.3s ease;
+  }
+  
+  .slider-dot.active {
+    background-color: #4DB6AC;
+  }
+  
 
-.slider-dot.active {
-    opacity: 1;
-    background-color: var(--primary);
-}
+
 .container2 {
     width: 100%;
     max-width: 1200px;
@@ -735,3 +782,16 @@ footer {
         font-size: 1.5rem;
     }
 }
+@media (max-width: 768px) {
+    .slider-container {
+      gap: 1rem;
+    }
+    
+    .testimonial {
+      flex: 0 0 90%;
+    }
+    
+    .slider-controls {
+      margin-top: 1.5rem;
+    }
+  }
