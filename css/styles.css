@@ -227,6 +227,21 @@ a:hover {
     text-align: center;
 
 }
+.footer-btn {
+    display: inline-block;
+    background-color: rgb(216, 103, 131);
+    color: var(--white);
+    padding: 0.8rem 8.0rem;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 800;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: -20px;
+    font-size: 1.0rem;
+}
 .btn0 {
     display: inline-block;
     background-color: rgb(17, 0, 255);
@@ -272,6 +287,11 @@ a:hover {
 }
 .contact-btn:hover{
     background-color: rgb(222, 9, 241);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+.footer-btn:hover{
+    background-color: rgb(71, 9, 241);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -889,22 +909,41 @@ header {
 
 /* Footer */
 footer {
-    background-color: var(--text);
+    display: flex;
     color: var(--white);
     padding: 4rem 0 2rem;
+}
+.footer-title{
+    
+    color: rgb(245, 239, 239);
+    padding: 0rem 0rem;
+    margin-top: -50px; 
+    font-size: 1.1rem;
+    font-weight: bolder;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
+}
+.footer-grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 40px;
+    background-color: #294750;
+    padding: 60px 40px;
+    height: 400px;
+    width: 100%;
 }
 
 .footer-col h3 {
     color: var(--white);
     margin-bottom: 1.5rem;
-    position: relative;
+    position:absolute;
     padding-bottom: 0.5rem;
 }
 
@@ -917,6 +956,21 @@ footer {
     height: 2px;
     background-color: var(--primary);
 }
+.footer-col3{
+    flex: 50%;
+    background-color: #3a8a7f;
+    text-align: start;
+    padding: 0px;
+    border-radius: 40px;
+    color: white;
+    margin: -420px -610px -200px 650px;
+    height: 400px;
+}
+.footer-para{
+    padding: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .footer-links {
     list-style: none;
@@ -924,6 +978,8 @@ footer {
 
 .footer-links li {
     margin-bottom: 0.8rem;
+    font-size: 0.96rem;
+    
 }
 
 .footer-links a {
@@ -960,9 +1016,12 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #96b3ae;
+    text-align: start;
+    padding: 40px;
+    margin-top: -160px;
+    font-size: 1.3rem;
+
 }
 
 /* Responsive Styles */
