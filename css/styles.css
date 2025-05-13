@@ -142,6 +142,29 @@ a:hover {
     margin-bottom: 50px; 
 
 }
+.column5 {
+    position: sticky;
+    flex: 50%;
+    padding-top:  0px;
+    height: 270px;
+    margin: 120px 150px 0px 0px;
+    border:solid color black;
+    background-color: #d3cdbf;
+    border-radius: 40px;
+    width: 370px;
+
+}
+.Faq {
+    left: 0;
+    height: 300px;
+    transform: translateY(0%);
+    width: 250px;
+    pointer-events: none;
+    margin: -380px 0px 90px 60px;
+    background-color: rgb(161, 122, 49);
+    border-radius: 40px;
+    overflow: hidden;
+}
 
 
 .mental-right {
@@ -191,6 +214,19 @@ a:hover {
     font-weight: 600;
     text-align: center;
 }
+.contact-btn {
+    display: inline-block;
+    background-color: rgb(30, 218, 23);
+    color: var(--white);
+    padding: 0.8rem 8.0rem;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 800;
+    text-align: center;
+
+}
 .btn0 {
     display: inline-block;
     background-color: rgb(17, 0, 255);
@@ -230,6 +266,11 @@ a:hover {
 
 
 .btn:hover {
+    background-color: rgb(222, 9, 241);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+.contact-btn:hover{
     background-color: rgb(222, 9, 241);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
@@ -358,10 +399,34 @@ header {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-
+.contact-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #dce1e4;
+    height: 650px;
+}
 /* Contact Section */
 .contact {
     background-color: var(--white);
+}
+.contact-footer{
+    text-align: start;
+    margin-top: 14rem;
+    font-size: 1.2rem;
+    position:absolute;
+    font-weight: bold;
+}
+.contact-title{
+    text-align: start;
+    margin-top: 40px;
+    font-size: 2rem;
+}
+.text-center1{
+    text-align: center;
 }
 
 .contact-grid {
@@ -397,7 +462,8 @@ header {
 .contact-form {
     background-color: var(--secondary);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 40px;
+    margin: -250px -550px 0px 550px;
 }
 
 .form-group {
@@ -408,6 +474,7 @@ header {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    text-align: start;
 }
 
 .form-group input,
@@ -870,19 +937,20 @@ footer {
 
 .social-links {
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 1.9rem;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(27, 7, 7, 0.1);
     border-radius: 50%;
     margin-right: 1rem;
-    color: var(--white);
+    color: black;
+    border: solid 1px black;
     transition: var(--transition);
 }
 
