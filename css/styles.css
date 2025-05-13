@@ -121,6 +121,28 @@ a:hover {
     z-index: 1;
     
 }
+.column2 {
+    flex: 60%;
+    padding: 0px;
+    height: 400px; 
+    margin-bottom: 50px; 
+    margin-right: -20px;
+}
+.column3 {
+    flex: 60%;
+    padding: 0px;
+    height: 450px;
+    margin-top: 150px;  
+
+}
+.column4 {
+    flex: 40%;
+    padding-top:  50px;
+    height: 400px;
+    margin-bottom: 50px; 
+
+}
+
 
 .mental-right {
     width: 80%; /* Makes image fill its container */
