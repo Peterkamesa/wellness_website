@@ -483,6 +483,33 @@ header {
     border-radius: 40px;
     margin: -250px -550px 0px 550px;
 }
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 0rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.contact-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    width: 10px;
+    color: #3498db;
+    font-size: 1.1rem;
+}
+
+.contact-item a, .contact-item span {
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #3498db;
+}
 
 .form-group {
     margin-bottom: 1.5rem;
