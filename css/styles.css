@@ -142,6 +142,7 @@ a:hover {
     margin-bottom: 50px; 
     margin-right: -20px;
 }
+
 .accordion-column {
     flex: 60%;
     padding-top: 220px;
@@ -1523,7 +1524,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .services-grid, .service-card1, .service-card0, .service-card, .resources-grid {
+    .services-grid, .service-card1, .service-card0, .service-card, .resources-grid, .accordion-column, .faq-column {
         grid-template-columns: 1fr;
     }
 
