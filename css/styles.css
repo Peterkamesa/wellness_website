@@ -199,7 +199,7 @@ a:hover {
     background-color: rgb(212, 191, 149);
     pointer-events: none;
     z-index: -1;
-    margin: 0px 0px 200px -266px;
+    margin: 0px 0px 200px -256px;
   }
   .wellness {
     position:relative;
@@ -799,23 +799,6 @@ legend.community-title {
     background: #b13636;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .partners-header {
-        gap: 1rem;
-    }
-    
-    .partners-title {
-        font-size: 1.5rem;
-    }
-    
-    .partner-logo {
-        min-width: 120px;
-        height: 60px;
-        font-size: 1rem;
-    }
-}
-
 .resource-card {
     background-color: rgb(206, 197, 71);
     border-radius: 40px;
@@ -1271,6 +1254,21 @@ footer {
 }
 
 /* Responsive Styles */
+@media (max-width: 768px) {
+    .partners-header {
+        gap: 1rem;
+    }
+    
+    .partners-title {
+        font-size: 1.5rem;
+    }
+    
+    .partner-logo {
+        min-width: 120px;
+        height: 60px;
+        font-size: 1rem;
+    }
+}
 
 @media (max-width: 1200px) {
     .container, .container1, .container2, .faq-container, .contact-container {
