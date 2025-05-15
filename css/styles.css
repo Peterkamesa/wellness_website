@@ -142,7 +142,7 @@ a:hover {
     margin-bottom: 50px; 
     margin-right: -20px;
 }
-.column3 {
+.accordion-column {
     flex: 60%;
     padding-top: 220px;
     height: 450px;
@@ -1475,13 +1475,17 @@ footer {
         text-align: center;
     }
 
-    .accordion, .faq-column {
+    .accordion-column, .faq-column {
         grid-template-columns: 1fr;
         padding: 0 1rem;
     }
 }
 
 @media (max-width: 768px) {
+    .accordion-column, .faq-column {
+        grid-template-columns: 1fr;
+        
+    }
     .faq-container {
         padding: 0 1rem;
     }
@@ -1511,7 +1515,7 @@ footer {
         gap: 1rem;
     }
 }
-/*services and resource*/
+/*services, accordion and resources*/
 @media (max-width: 992px) {
     .services-grid, .resources-grid {
         grid-template-columns: repeat(2, 1fr);
