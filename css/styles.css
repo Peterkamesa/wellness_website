@@ -1489,7 +1489,7 @@ footer {
 
     .faq-column, 
     .accordion-column {
-        flex: 120%;
+        flex: 100%;
         padding: 20px 0;
         height: auto; /* Remove fixed height */
     }
