@@ -1514,7 +1514,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .services-grid, .resources-grid {
+    .services-grid, .service-card1, .service-card0, .service-card, .resources-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1578,7 +1578,7 @@ footer {
         padding: 2rem;
     }
 
-    .community-img {
+    .community-img, .wellness {
         height: auto;
         margin: 1rem 0;
     }
