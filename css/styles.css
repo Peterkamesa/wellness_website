@@ -1491,16 +1491,10 @@ footer {
     .accordion-column {
         flex: 120%;
         padding: 20px 0;
-        margin: 0 !important;
         height: auto; /* Remove fixed height */
     }
 
-    .Faq-image {
-        height: auto;
-        max-width: 100%;
-        margin: 1rem auto;
-        display: block; /* Ensure proper spacing */
-    }
+
     .faq-container {
         padding: 0 1rem;
     }
