@@ -1485,9 +1485,26 @@ footer {
 @media (max-width: 768px) {
     .row {
         flex-direction: column;
+        
     }
 
-    .faq-column, 
+    .faq-column {
+        flex: 100%;
+        padding: 20px 15px !important; /* Override any large left padding */
+        margin: 0 !important; /* Kill any negative margins */
+        width: 100vw; /* Force full viewport width */
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%); /* Center-align the entire column */
+    }
+
+    /* Reset any problematic child elements */
+    .faq-column > * {
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
     .accordion-column {
         flex: 100%;
         padding: 20px 0;
