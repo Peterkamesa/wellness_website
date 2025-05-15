@@ -116,8 +116,12 @@ a:hover {
     padding: 60px 0px 0px 20px;
     height: 500px; 
     margin: 0px 0px 0px 80px;
-    
-
+}
+.faq-column {
+    flex: 60%;
+    padding: 60px 0px 0px 0px;
+    height: 500px; 
+    margin: 0px 0px 0px 0px;
 }
 
 .column1 {
@@ -1471,7 +1475,7 @@ footer {
         text-align: center;
     }
 
-    .accordion, .column {
+    .accordion, .faq-column {
         grid-template-columns: 1fr;
         padding: 0 1rem;
     }
