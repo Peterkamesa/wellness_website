@@ -1471,7 +1471,8 @@ footer {
         text-align: center;
     }
 
-    .accordion {
+    .accordion, .column {
+        grid-template-columns: 1fr;
         padding: 0 1rem;
     }
 }
