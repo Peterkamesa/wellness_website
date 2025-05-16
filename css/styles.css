@@ -1489,7 +1489,7 @@ footer {
 
     .faq-column {
         flex: 100%;
-        padding: 50px 0;
+        padding: 40px 0;
         height: auto; /* Remove fixed height */
         margin-left: 20px;
     }
