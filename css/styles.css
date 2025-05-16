@@ -1487,7 +1487,7 @@ footer {
         flex-direction: column;
     }
 
-    .faq-column {
+    .faq-column, .column5 {
         flex: 0 0 100%; /* More robust than just flex: 100% */
         padding: 20px 20px 10px 10px; /* Balanced mobile padding */
         margin-left: 0; /* Remove left margin */
@@ -1500,12 +1500,7 @@ footer {
         left: 0; /* Clear any horizontal offset */
       }
       
-      /* Fix for absolutely positioned children */
- /* Image adjustments */
-  .Faq-image {
-    max-width: calc(100% - 20px); /* Account for padding */
-    margin: 15px auto !important;
-  }
+
     .accordion-column {
         flex: 100%;
         padding: 20px 0;
