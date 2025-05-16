@@ -1488,11 +1488,23 @@ footer {
     }
 
     .faq-column {
-        flex: 100%;
-        padding: 40px 0px 0px 40px;
-        height: auto; /* Remove fixed height */
-        margin-left: 20px;
-    }
+        flex: 0 0 100%; /* More robust than just flex: 100% */
+        padding: 20px 15px 10px 20px; /* Balanced mobile padding */
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Force full width */
+        box-sizing: border-box; /* Include padding in width calc */
+        
+        /* Additional safeguards */
+        overflow: visible; /* Prevent content clipping */
+        position: relative; /* Reset positioning context */
+        left: 0; /* Clear any horizontal offset */
+      }
+      
+      /* Fix for absolutely positioned children */
+      .faq-column > [class*="column"] {
+        position: static !important;
+        margin: 10px 0 !important;
+      }
     .accordion-column {
         flex: 100%;
         padding: 20px 0;
