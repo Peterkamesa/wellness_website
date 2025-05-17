@@ -1444,30 +1444,50 @@ footer {
     }
 }
 
+/* Hero Section - Modified for decor-left below content on mobile */
 @media (max-width: 768px) {
-    .container1 {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-        .decor-left {
-        height: auto;
-        margin: 1rem 0;
-    }
+  .hero {
+    height: auto;
+    padding: 4rem 0 2rem; /* Adjusted padding */
+  }
 
-    .hero {
-        height: auto;
-        padding: 6rem 0;
-    }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .hero h1 {
-        font-size: 2rem;
-    }
+  .decor-left {
+    position: relative; /* Change from absolute */
+    order: 2; /* Move below content */
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 2rem auto 0;
+    transform: none;
+    left: auto;
+    border-radius: 20px;
+    border-bottom-left-radius: 0; /* Remove special corner */
+  }
 
-    .decor-right {
-        display: none; /* Hide decorative elements on small screens */
-    }
+  .decor-right {
+    display: none; /* Keep right decoration hidden */
+  }
+
+  .hero-content > div:first-child {
+    order: 1; /* Ensure text content stays above */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 }
-
 @media (max-width: 576px) {
     .hero h1 {
         font-size: 1.8rem;
@@ -1552,7 +1572,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .services-grid, .service-card1, .service-card0, .service-card, .resources-grid, .accordion-column, .faq-column, .container1 {
+    .services-grid, .service-card1, .service-card0, .service-card, .resources-grid, .accordion-column, .faq-column {
         grid-template-columns: 1fr;
     }
 
@@ -1616,7 +1636,7 @@ footer {
         padding: 2rem;
     }
 
-    .community-img, .wellness, .decor-left {
+    .community-img, .wellness {
         height: auto;
         margin: 1rem 0;
     }
