@@ -1445,10 +1445,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .container1 {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
+
     .hero {
         height: auto;
         padding: 6rem 0;
