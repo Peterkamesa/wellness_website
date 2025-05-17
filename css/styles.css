@@ -1446,8 +1446,14 @@ footer {
 
 @media (max-width: 768px) {
     .container1 {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        height: auto;
     }
+        .decor-left {
+        height: auto;
+        margin: 1rem 0;
+    }
+
     .hero {
         height: auto;
         padding: 6rem 0;
