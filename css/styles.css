@@ -1445,7 +1445,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-
+    .container1 {
+        flex-direction: column;
+    }
     .hero {
         height: auto;
         padding: 6rem 0;
