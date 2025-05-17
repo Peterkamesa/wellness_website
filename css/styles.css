@@ -1544,7 +1544,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .services-grid, .service-card1, .service-card0, .service-card, .resources-grid, .accordion-column, .faq-column {
+    .services-grid, .service-card1, .service-card0, .service-card, .resources-grid, .accordion-column, .faq-column, .container1 {
         grid-template-columns: 1fr;
     }
 
@@ -1608,7 +1608,7 @@ footer {
         padding: 2rem;
     }
 
-    .community-img, .wellness {
+    .community-img, .wellness, .decor-left {
         height: auto;
         margin: 1rem 0;
     }
