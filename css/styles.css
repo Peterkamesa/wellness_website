@@ -1449,10 +1449,6 @@ footer {
         grid-template-columns: 1fr;
         height: auto;
     }
-        .decor-left {
-        height: auto;
-        margin: 1rem 0;
-    }
 
     .hero {
         height: auto;
@@ -1463,7 +1459,7 @@ footer {
         font-size: 2rem;
     }
 
-    .decor-right, .decor-left {
+    .decor-right {
         display: none; /* Hide decorative elements on small screens */
     }
 }
