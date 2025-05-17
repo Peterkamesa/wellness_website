@@ -1445,7 +1445,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .container1 {
+    .container1, .decor-left {
         flex-direction: column;
         grid-template-columns: 1fr;
         height: auto;
