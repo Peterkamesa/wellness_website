@@ -1464,7 +1464,7 @@ footer {
         font-size: 2rem;
     }
 
-    .decor-right {
+    .decor-right,.decor-left {
         display: none; /* Hide decorative elements on small screens */
     }
 }
