@@ -1449,6 +1449,10 @@ footer {
         grid-template-columns: 1fr;
         height: auto;
     }
+    .decor-left {
+        height: auto;
+        margin: 1rem 0;
+    }
 
     .hero {
         height: auto;
