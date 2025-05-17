@@ -1444,50 +1444,30 @@ footer {
     }
 }
 
-/* Hero Section - Modified for decor-left below content on mobile */
 @media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 4rem 0 2rem; /* Adjusted padding */
-  }
+    .container1 {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+        .decor-left {
+        height: auto;
+        margin: 1rem 0;
+    }
 
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
+    .hero {
+        height: auto;
+        padding: 6rem 0;
+    }
 
-  .decor-left {
-    position: relative; /* Change from absolute */
-    order: 2; /* Move below content */
-    width: 80%;
-    max-width: 300px;
-    height: auto;
-    margin: 2rem auto 0;
-    transform: none;
-    left: auto;
-    border-radius: 20px;
-    border-bottom-left-radius: 0; /* Remove special corner */
-  }
+    .hero h1 {
+        font-size: 2rem;
+    }
 
-  .decor-right {
-    display: none; /* Keep right decoration hidden */
-  }
-
-  .hero-content > div:first-child {
-    order: 1; /* Ensure text content stays above */
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .hero p {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
+    .decor-right, .decor-left {
+        display: none; /* Hide decorative elements on small screens */
+    }
 }
+
 @media (max-width: 576px) {
     .hero h1 {
         font-size: 1.8rem;
