@@ -154,6 +154,7 @@ a:hover {
     padding-top: 220px;
     height: 450px;
     margin-top: 0px;  
+    
 
 }
 .column4 {
@@ -301,7 +302,7 @@ a:hover {
 }
 .footer-btn {
     display: inline-block;
-    background-color: rgb(216, 103, 131);
+    background-color: #d65f47;
     color: var(--white);
     padding: 0.8rem 8.0rem;
     border: none;
@@ -518,8 +519,8 @@ header {
     padding: 0 1rem;
     text-align: center;
     border-radius: 40px;
-    background-color: #dce1e4;
-    height: 650px;
+    background-color: bisque;
+    height: 600px;
 }
 /* Contact Section */
 .contact-legend{
@@ -575,7 +576,7 @@ header {
 }
 
 .contact-form {
-    background-color: var(--secondary);
+    background-color: #E2725B;
     padding: 2rem;
     border-radius: 40px;
     margin: -250px -550px 0px 550px;
@@ -629,7 +630,7 @@ header {
 }
 
 .form-group textarea {
-    height: 150px;
+    height: 120px;
     resize: vertical;
 }
 
@@ -647,7 +648,8 @@ header {
 .accordion {
     max-width: 800px;
     margin: 0 auto;
-    
+    background-color: bisque;
+    border-radius: 10px;
 }
 
 .accordion-item {
@@ -695,7 +697,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
-    background-color: rgb(236, 157, 232);
+    background-color: #E2725B;
     border-radius: 60px;
     position: relative;
 }
@@ -714,7 +716,6 @@ legend.community-title {
     font-size: 0.8rem;
     font-weight: bold;
     color: #333;
-    background: rgb(236, 157, 232);
     position: relative;
     top: -0.5rem;
 }
@@ -729,7 +730,7 @@ legend.community-title {
     max-width: 700px;
     margin-bottom: 3rem;
     text-align: start;
-    color: #0c0202;
+    color: white;
 }
 
 .community-img {
@@ -749,7 +750,7 @@ legend.community-title {
     padding: 1rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #582c2c;
+    background-color: #E2725B;
     border-radius: 50px;
 }
 
@@ -828,21 +829,21 @@ legend.community-title {
 }
 
 .resource-card {
-    background-color: rgb(206, 197, 71);
+    background-color: bisque;
     border-radius: 40px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
 .resource-card1 {
-    background-color: gold;
+    background-color: bisque;
     border-radius: 40px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
 .resource-card2 {
-    background-color: salmon;
+    background-color: bisque;
     border-radius: 40px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -853,19 +854,22 @@ legend.community-title {
 .resource-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: bisque;
-    border: solid 2px brown;
+    background-color: #E2725B;
+    color: var(--white);
+    border: solid 2px rgb(3, 250, 250);
 }
 .resource-card1:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: #9bfa03;
+    background-color: #E2725B;
+    color: var(--white);
     border: solid 2px rgb(20, 5, 1);
 }
 .resource-card2:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-color: #fa9703;
+    background-color: #E2725B;
+    color: var(--white);
     border: solid 2px rgb(19, 2, 245);
 }
 
@@ -1169,12 +1173,12 @@ legend.explore {
 /* Footer */
 footer {
     display: flex;
-    color: var(--white);
+    color: rgb(17, 16, 16);;
     padding: 4rem 0 2rem;
 }
 .footer-title{
     
-    color: rgb(245, 239, 239);
+    color: rgb(24, 22, 22);
     padding: 0rem 0rem;
     margin-top: -50px; 
     font-size: 1.1rem;
@@ -1193,10 +1197,11 @@ footer {
     gap: 2rem;
     margin-bottom: 3rem;
     border-radius: 40px;
-    background-color: #294750;
+    background-color: #ac4631;
     padding: 60px 40px;
     height: 400px;
     width: 100%;
+    
 }
 
 .footer-col h3 {
@@ -1217,13 +1222,18 @@ footer {
 }
 .footer-col3{
     flex: 50%;
-    background-color: #3a8a7f;
+    background-color: rgb(243, 197, 141);
     text-align: start;
     padding: 0px;
     border-radius: 40px;
-    color: white;
+    color: black;
     margin: -420px -610px -200px 650px;
     height: 400px;
+    font-weight: bolder;
+}
+.footer-col2 {
+    color: #070707;
+    font-weight: bold;
 }
 .footer-para{
     padding: 60px;
@@ -1232,13 +1242,14 @@ footer {
 }
 
 .footer-links {
-    list-style: none;
+    
+    color: #070707;
 }
 
 .footer-links li {
     margin-bottom: 0.8rem;
     font-size: 0.96rem;
-    
+    color: #751010;
 }
 
 .footer-links a {
@@ -1264,7 +1275,7 @@ footer {
     background-color: rgba(27, 7, 7, 0.1);
     border-radius: 50%;
     margin-right: 1rem;
-    color: black;
+    color: rgb(241, 239, 239);
     border: solid 1px black;
     transition: var(--transition);
 }
@@ -1275,7 +1286,7 @@ footer {
 }
 
 .footer-bottom {
-    color: #96b3ae;
+    color: #f5faf9;
     text-align: start;
     padding: 40px;
     margin-top: -160px;
