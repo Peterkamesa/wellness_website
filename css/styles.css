@@ -208,7 +208,6 @@ a:hover {
     max-width: 200px; 
     object-fit: contain; 
     border-radius: 100px;
-    
     pointer-events: none;
     z-index: -1;
     margin: 0px 0px 200px -256px;
@@ -220,7 +219,6 @@ a:hover {
     max-width: 500px; 
     object-fit: contain; 
     border-radius: 50px;
-   
     pointer-events: none;
     margin: -353px 0px -36px 637px;
   }
@@ -369,7 +367,7 @@ a:hover {
     box-shadow: var(--shadow);
 }
 .therapy-btn:hover {
-    background-color: rgb(222, 9, 241);
+    background-color: bisque;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -447,6 +445,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
+    
 }
 
 .logo {
@@ -463,6 +462,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
+    
 }
 
 .nav-links li {
@@ -471,7 +471,7 @@ header {
 
 .nav-links a {
     color: var(--text);
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .nav-links a:hover {
@@ -1293,6 +1293,15 @@ footer {
     font-size: 1.3rem;
 
 }
+.decor-left, .decor-right {
+  flex-shrink: 0; /* Prevents images from shrinking */
+}
+
+/* Responsive Images */
+.decor-left img, .decor-right img {
+  max-width: 100%; /* Ensures images don't overflow */
+  height: auto; /* Maintains aspect ratio */
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -1486,10 +1495,15 @@ footer {
         grid-template-columns: 1fr;
         height: auto;
     }
-    .decor-left {
-        height: auto;
-        margin: 1rem 0;
-    }
+    .hero-content {
+    flex-direction: column; /* Stacks items vertically */
+    gap: 1rem;
+  }
+  .decor-left, .decor-right {
+    width: 50%; /* Smaller images on medium screens */
+  }
+
+
 
     .hero {
         height: auto;
