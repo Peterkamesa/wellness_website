@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Bricolage Grotesque';
     color: var(--text);
     line-height: 1.6;
     background-color: var(--light-gray);
@@ -26,6 +26,13 @@ body {
 .h1 {
     margin-bottom: 1rem;
     color: #FFFFFF;
+    width: 640px;
+    height: 168px;
+    font-size: 70px; 
+    line-height: 100%; 
+    font-weight: 700;  
+    letter-spacing: 0.5px;
+    
 }
 h2, h3 {
     margin-bottom: 1rem;
@@ -38,6 +45,13 @@ p {
 .p1 {
     margin-bottom: 1rem;
     color: #FFFFFF;
+    width: 564px;
+    height: 58px;
+    font-size: 24px; 
+    line-height: 100%; 
+    font-weight: 400;  
+    letter-spacing: 0.5px;
+    
 }
 a {
     text-decoration: none;
@@ -49,12 +63,14 @@ a:hover {
     color: var(--accent);
 }
 .container1 {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
+    width: 1240px;
     margin: 0 auto;
+    margin-top: 80px;
     padding: 0 1rem;
     background-color: #E2725B;
-    height: 450px;
+    height: 540px;
     display: flex;
     align-items: center;
     border-radius: 60px;
@@ -65,11 +81,11 @@ a:hover {
   .decor-left {
     position: absolute;
     left: 0;
-    height: 350px;
+    height: 460px;
     transform: translateY(0%);
     width: 300px;
     pointer-events: none;
-    margin: 12px 0px 0px 77px;
+    margin: -22px 0px 0px 0px;
     background-color: #E2725B;
     border-bottom-left-radius: 60px;
     overflow: hidden;
@@ -80,13 +96,14 @@ a:hover {
     position: absolute;
     right: 0; /* Aligns to the right edge of .hero-content */
     top: 0; 
-    height: 341px;
-    width: 300px;
+    height: 500px;
+    width: 350px;
     pointer-events: none;
     background-color: #E2725B;
     border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
     overflow: hidden;
-    margin: 90px 76px 0px 0px;
+    margin: 0px 0px 0px 0px;
   }
 
   
@@ -95,6 +112,14 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+.cta-container {
+    width: 1140px;
+    height: 564px;
+    top: 0px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-top: -100px;
 }
 .faq-container {
     width: 100%;
@@ -123,6 +148,15 @@ a:hover {
     height: 500px; 
     margin: 0px 0px 0px 80px;
 }
+.cta-column {
+    flex: 60%;
+    padding: 60px 0px 0px 20px;
+    height: 500px; 
+    margin: 0px 0px 0px 80px;
+    width: 476px;
+    height: 470px;
+    top: 968px;
+}
 .faq-column {
     flex: 60%;
     padding: 60px 0px 0px 0px;
@@ -132,7 +166,9 @@ a:hover {
 
 .column1 {
     flex: 40%;
-    width: 100%;
+    width: 550px;
+    height: 564px;
+    top: 921px;
     padding: 10px 0px 0px 0px;
     height: 500px;
     background-color: #E2725B;
@@ -190,19 +226,19 @@ a:hover {
 
 
 .mental-right {
-    width: 80%; 
-    height: 250px; 
-    max-width: 400px; 
+    position:relative;
+    width: 350px; 
+    height: 493px; 
     object-fit: contain; /* Ensures full image is visible */
     border-radius: 50px;
-    
+    top: 21px;
     pointer-events: none;
     z-index: 1;
-    margin: 0px 0px -87px 40px;
+    margin: 100px 0px 0px 0px;
   }
 
   .hand-right {
-    position: relative;
+    position: absolute;
     width: 100%; /* Makes image fill its container */
     height: auto; 
     max-width: 200px; 
@@ -210,17 +246,18 @@ a:hover {
     border-radius: 100px;
     pointer-events: none;
     z-index: -1;
-    margin: 0px 0px 200px -256px;
+    margin: 0px 0px 200px -270px;
   }
   .wellness {
-    position:relative;
+    position:absolute;
     width: 100%; 
     height: 453px; 
     max-width: 500px; 
     object-fit: contain; 
     border-radius: 50px;
     pointer-events: none;
-    margin: -353px 0px -36px 637px;
+    margin: -156px 0px -36px 560px;
+    border-bottom-right-radius: 60px;
   }
   .btn {
     display: inline-block;
@@ -234,18 +271,38 @@ a:hover {
     font-weight: 600;
     text-align: center;
 }
-  .cta-btn {
+  .hero-btn {
     display: inline-block;
-    background-color: blue;
-    color: var(--white);
-    padding: 0.5rem 1.5rem;
+    background-color: #E8E8E8;
+    color: black;
+    padding: 15px 39px 15px 39px;
     border: none;
     border-radius: 40px;
     cursor: pointer;
     transition: var(--transition);
     font-weight: 600;
     text-align: center;
+    width: hug(195px);
+    height: fixed(54px);
+    top: 456px;
 }
+  .cta-btn {
+    display: inline-block;
+    background-color: blue;
+    color: var(--white);
+    padding: 15px 39px 15px 39px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    text-align: center;
+    width: hug(243px);
+    height: fixed(54px);
+    top: 1384px;
+    gap: 10px;
+}
+
 .therapy-btn{
     display: inline-block;
     background-color: rgb(173, 70, 101);
@@ -356,6 +413,11 @@ a:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
+.hero-btn:hover {
+    background-color: bisque;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
 .cta-btn:hover {
     background-color: rgb(99, 99, 218);
     transform: translateY(-2px);
@@ -402,8 +464,10 @@ a:hover {
     box-shadow: var(--shadow);
 }
 
-.section {
+.section-cta {
     padding: 4rem 0;
+    margin-top: 10px;
+
 }
 
 .section-title {
@@ -411,13 +475,26 @@ a:hover {
     margin-bottom: 3rem;
     font-size: 2.2rem;
     position: relative;
+    top: 0px;
+    width: 440px;
+    height: 186px;
+    font-size: 52px; 
+    line-height: 100%; 
+    font-weight: 700;  
+    letter-spacing: 0.5px;
 }
 .section-title2 {
-    text-align: center;
     margin-bottom: 0.4rem;
     font-size: 2.5rem;
-    position: relative;
-    line-height: 2.8rem;
+    left: 400px;
+    line-height: 100%;
+    width: 440px;
+    height: 124px;
+    font-size: 52px; 
+    line-height: 100%; 
+    font-weight: 700;  
+    letter-spacing: 0.5px;
+    margin: 0 auto;
 }
 
 
@@ -493,7 +570,7 @@ header {
     align-items: center;
     text-align: center;
     padding-top: 10px;
-   
+       
 }
 
 .hero-content {
@@ -541,8 +618,28 @@ header {
     margin-top: 40px;
     font-size: 2rem;
 }
+.services-text {
+    text-align: center;
+    width: 476px;
+    height: 68px;
+    font-size: 22px; 
+    line-height: 34px; 
+    font-weight: 400;  
+    letter-spacing: 0.5px;
+    left: 482px;
+    margin: 0 auto;
+}
 .text-center1{
     text-align: center;
+}
+.text-center{
+    text-align: start;
+    width: 476px;
+    height: 102px;
+    font-size: 22px; 
+    line-height: 34px; 
+    font-weight: 400;  
+    letter-spacing: 0.5px;
 }
 
 .contact-grid {
@@ -1059,15 +1156,15 @@ fieldset.cta {
     border: 0px solid #271c1c;
     border-radius: 8px;
     padding: 0px 0px 0px 0px; 
-    margin: 0px 0;   
+    margin-top: 140px;   
     text-align: start;
 }
 
 legend.leg-title {
     text-align: left; 
-    margin-left: 100px; 
-    margin-top: -30px;
-    padding: 0px 0px 0px 100px; 
+    margin-left: 255px; 
+    margin-bottom: 50px;
+    padding: 0px 0px 0px 0px; 
     font-size: 0.8rem;
     font-weight: bold;
     color: #333;
@@ -1107,12 +1204,19 @@ legend.explore {
     margin: 0 auto;
 }
 /* Services Section */
+.services {
+    width: 1240px;
+    height: 1279px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 4rem;
     margin-bottom: 10px;
-
+    margin: 0 auto;
 }
 
 .services-grid1 {
@@ -1129,6 +1233,10 @@ legend.explore {
     text-align: start;
     transition: var(--transition);
     font-size: 1.2rem;
+    width: 600px;
+    height: 455px;
+    left: 740px;
+    
 }
 .service-card0 {
     background-color: #E2725B;
@@ -1139,6 +1247,10 @@ legend.explore {
     transition: var(--transition);
     color: black;
     font-size: 1.2rem;
+    width: 600px;
+    height: 455px;
+    left: 100px;
+    
 }
 
 .service-card1 {
@@ -1149,6 +1261,9 @@ legend.explore {
     text-align: start;
     transition: var(--transition);
     margin-top: 20px;
+    width: 1240px;
+    height: 455px;
+    
 }
 
 .service-card0:hover {
