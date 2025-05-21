@@ -256,7 +256,7 @@ a:hover {
     object-fit: contain; 
     border-radius: 50px;
     pointer-events: none;
-    margin: -156px 0px -36px 560px;
+    margin: -330px 0px 0px 510px;
     border-bottom-right-radius: 60px;
   }
   .btn {
@@ -290,7 +290,6 @@ a:hover {
     display: inline-block;
     background-color: blue;
     color: var(--white);
-    padding: 15px 39px 15px 39px;
     border: none;
     border-radius: 40px;
     cursor: pointer;
@@ -300,14 +299,14 @@ a:hover {
     width: hug(243px);
     height: fixed(54px);
     top: 1384px;
+    padding: 15px 39px 15px 39px;
     gap: 10px;
 }
 
 .therapy-btn{
-    display: inline-block;
-    background-color: rgb(173, 70, 101);
+    display: inline-flex;
+    
     color: black;
-    padding: 0.5rem 1.8rem;
     border: none;
     border-radius: 40px;
     cursor: pointer;
@@ -315,9 +314,18 @@ a:hover {
     font-weight: 800;
     text-align: center;
     border: solid 2px black;
+    width: 192px;
+    height: 54px;
+    left: 160px;
+    top: 2291px;
+    padding: 15px 39px 15px 39px;
+    gap: 10px;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
 }
 .meditation-btn {
-    display: inline-block;
+    display: inline-flex;
     background-color: bisque;
     color: black;
     padding: 0.5rem 1.8rem;
@@ -328,9 +336,18 @@ a:hover {
     font-weight: 800;
     text-align: center;
     border: solid 2px black;
+    width: 192px;
+    height: 54px;
+    left: 800px;
+    top: 2291px;
+    padding: 15px 39px 15px 39px;
+    gap: 10px;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
 }
 .wellness-btn {
-    display: inline-block;
+    display: inline-flex;
     background-color: rgb(243, 137, 7);
     color: black;
     padding: 0.5rem 1.8rem;
@@ -340,6 +357,15 @@ a:hover {
     transition: var(--transition);
     font-weight: 800;
     text-align: center;
+    width: 192px;
+    height: 54px;
+    left: 160px;
+    top: 2290px;
+    padding: 15px 39px 15px 39px;
+    gap: 10px;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
    
 }
 .contact-btn {
@@ -424,19 +450,22 @@ a:hover {
     box-shadow: var(--shadow);
 }
 .wellness-btn:hover {
-    background-color: rgb(9, 233, 241);
+    background-color: #E2725B;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    color: white;
 }
 .therapy-btn:hover {
     background-color: bisque;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    color: #070707;
 }
 .meditation-btn:hover {
-    background-color: rgb(222, 9, 241);
+    background-color: #E2725B;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    color: white;
 }
 .contact-btn:hover{
     background-color: rgb(222, 9, 241);
@@ -618,17 +647,7 @@ header {
     margin-top: 40px;
     font-size: 2rem;
 }
-.services-text {
-    text-align: center;
-    width: 476px;
-    height: 68px;
-    font-size: 22px; 
-    line-height: 34px; 
-    font-weight: 400;  
-    letter-spacing: 0.5px;
-    left: 482px;
-    margin: 0 auto;
-}
+
 .text-center1{
     text-align: center;
 }
@@ -1139,18 +1158,27 @@ legend.community-title {
 fieldset.services {
     border: 0px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-    position: relative;
+    padding: 0px;
+    margin: 0px 0;
+
 }
 
 legend.section-title2 {
     text-align: center;
-    padding: 0 15px;
+    padding: 15px 0;
     font-size: 1.5em;
     font-weight: bold;
     color: #333;
     margin: 0 auto;
+    width: 70px;
+    height: 17px;
+    left: 685px;
+    top: 1643px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
 }
 fieldset.cta {
     border: 0px solid #271c1c;
@@ -1207,9 +1235,8 @@ legend.explore {
 .services {
     width: 1240px;
     height: 1279px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    justify-items: center;
+    
 }
 .services-grid {
     display: grid;
@@ -1217,12 +1244,76 @@ legend.explore {
     gap: 4rem;
     margin-bottom: 10px;
     margin: 0 auto;
+    justify-items: center;
 }
 
 .services-grid1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
+    justify-items: center;
+}
+.services-text {
+    text-align: center;
+    width: 476px;
+    height: 68px;
+    font-size: 22px; 
+    line-height: 34px; 
+    font-weight: 400;  
+    letter-spacing: 0.5px;
+    left: 482px;
+    margin: 0 auto;
+}
+.service-card0 {
+    background-color: #E2725B;
+    padding: 2rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    text-align: start;
+    transition: var(--transition);
+    color: black;
+    font-size: 1.2rem;
+    width: 600px;
+    height: 455px;
+    left: 100px;  
+}
+.services h3 {
+    width: 360px;
+    height: 96px;
+    font-size: 40px; 
+    line-height: 100%; 
+    font-weight: 600;  
+    letter-spacing: 0.5px;
+    left: 160px;
+    vertical-align: middle;
+}
+.service-card0 p {
+    width: 295px;
+    height: 78px;
+    font-size: 20px; 
+    line-height: 26px; 
+    font-weight: 400;  
+    letter-spacing: 0.5px;
+    left: 160px;
+    
+}
+.service-card p {
+    width: 312px;
+    height: 78px;
+    left: 800px;
+    font-weight: 400;
+    font-size: 20px; 
+    line-height: 26px; 
+    letter-spacing: 0.5px; 
+}
+.service-card1 p {
+    width: 617px;
+    height: 100px;
+    left: 160px;
+    font-weight: 400;
+    font-size: 20px; 
+    line-height: 26px; 
+    letter-spacing: 0.5px; 
 }
 
 .service-card {
@@ -1236,20 +1327,6 @@ legend.explore {
     width: 600px;
     height: 455px;
     left: 740px;
-    
-}
-.service-card0 {
-    background-color: #E2725B;
-    padding: 2rem;
-    border-radius: 50px;
-    box-shadow: var(--shadow);
-    text-align: start;
-    transition: var(--transition);
-    color: black;
-    font-size: 1.2rem;
-    width: 600px;
-    height: 455px;
-    left: 100px;
     
 }
 
