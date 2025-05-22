@@ -55,45 +55,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Slider (Conditional)
-    const slider = document.querySelector('.slider-container');
-    if (slider) {
-        const dots = document.querySelectorAll('.slider-dot');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-        let currentIndex = 0;
-        const testimonialCount = document.querySelectorAll('.testimonial').length;
+    // Slider Component
+document.addEventListener('DOMContentLoaded', () => {
+  const prevBtn = document.querySelector('.slider-arrow.prev');
+  const nextBtn = document.querySelector('.slider-arrow.next');
+  const slider = document.querySelector('.slider-container'); // Ensure this matches your slider container
+  const slides = document.querySelectorAll('.testimonial');   // Ensure this matches your slide class
+  let currentIndex = 0;
 
-        function updateSlider() {
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Updated to 100% per slide
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-        }
+  if (!slider || !slides.length) return; // Exit if no slider found
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', function() {
-                currentIndex = parseInt(this.getAttribute('data-slide'));
-                updateSlider();
-            });
-        });
+  // Function to update slider position
+  const updateSlider = () => {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  };
 
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonialCount - 1;
-                updateSlider();
-            });
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex < testimonialCount - 1) ? currentIndex + 1 : 0;
-                updateSlider();
-            });
-        }
+  // Previous button click handler
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+    updateSlider();
+  });
 
-        setInterval(() => {
-            currentIndex = (currentIndex < testimonialCount - 1) ? currentIndex + 1 : 0;
-            updateSlider();
-        }, 5000);
-    }
+  // Next button click handler
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+    updateSlider();
+  });
+
+  // Optional: Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevBtn.click();
+    if (e.key === 'ArrowRight') nextBtn.click();
+  });
+});
 
     // Form Submission
     const messageForm = document.getElementById('messageForm');
