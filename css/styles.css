@@ -108,8 +108,7 @@ a:hover {
 
   
 .container {
-    width: 100%;
-    max-width: 1240px;
+    width: 1240px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -587,7 +586,7 @@ header {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1240px;
     margin: 0 auto;
     
 }
@@ -1068,13 +1067,7 @@ legend.community-title {
 .partners-scroll-container::-webkit-scrollbar-thumb:hover {
     background: #b13636;
 }
-.container2 {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    text-align: center;
-}
+
 /* Resources Section */
 .resources-grid {
     display: grid;
@@ -1248,10 +1241,11 @@ legend.community-title {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     width: 1416px;
     height: 500px;
-    margin-left: 60px;
+   
   }
   
   
@@ -1405,7 +1399,7 @@ fieldset.services {
     border: 0px solid #ddd;
     border-radius: 8px;
     padding: 0px;
-    margin: 0px 0;
+    margin: 0 auto;
 
 }
 
@@ -1444,21 +1438,16 @@ legend.leg-title {
     color: #333;
     top: 10px; 
 }
-fieldset.testimonials {
-    border: 0px solid #271c1c;
-    border-radius: 8px;
-    padding: 30px 0px 50px 0px; 
-    margin: 30px 0px 0px 0px;   
+
+.testimonial-title {
     text-align: start;
-}
-legend.testimonial-title {
-    text-align: left; 
-    margin-left: 0px; 
-    padding: 0px 0px 0px 100px; 
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #333;
-    top: 10px; 
+    margin: 80px 0px -30px 40px;
+    width: 90px;
+    height: 17px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
 }
 
 fieldset.resources {
@@ -1482,19 +1471,30 @@ legend.explore {
     letter-spacing: 0.5px;
 }
 /* Services Section */
+/*.container2 {
+    
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    background-color: #03ddfa;
+}*/
 .services {
+    position: relative;
     width: 1240px;
     height: 1279px;
     justify-items: center;
-    
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
 }
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    gap: 2rem;
     margin-bottom: 10px;
-    margin: 0 auto;
     justify-items: center;
+
 }
 
 .services-grid1 {
@@ -1511,8 +1511,8 @@ legend.explore {
     line-height: 34px; 
     font-weight: 400;  
     letter-spacing: 0.5px;
-    left: 482px;
-    margin: 0 auto;
+    margin-bottom: 60px;
+    
 }
 .service-card0 {
     background-color: #E2725B;
@@ -1524,8 +1524,7 @@ legend.explore {
     color: black;
     font-size: 1.2rem;
     width: 600px;
-    height: 455px;
-    left: 100px;  
+    height: 455px; 
 }
 .services h3 {
     width: 360px;
@@ -1534,7 +1533,6 @@ legend.explore {
     line-height: 100%; 
     font-weight: 600;  
     letter-spacing: 0.5px;
-    left: 160px;
     vertical-align: middle;
 }
 .service-card0 p {
@@ -1544,13 +1542,11 @@ legend.explore {
     line-height: 26px; 
     font-weight: 400;  
     letter-spacing: 0.5px;
-    left: 160px;
     
 }
 .service-card p {
     width: 312px;
     height: 78px;
-    left: 800px;
     font-weight: 400;
     font-size: 20px; 
     line-height: 26px; 
@@ -1559,7 +1555,6 @@ legend.explore {
 .service-card1 p {
     width: 617px;
     height: 100px;
-    left: 160px;
     font-weight: 400;
     font-size: 20px; 
     line-height: 26px; 
@@ -1576,7 +1571,6 @@ legend.explore {
     font-size: 1.2rem;
     width: 600px;
     height: 455px;
-    left: 740px;
     
 }
 
@@ -1587,7 +1581,7 @@ legend.explore {
     box-shadow: var(--shadow);
     text-align: start;
     transition: var(--transition);
-    margin-top: 20px;
+    margin-top: 40px;
     width: 1240px;
     height: 455px;
     
