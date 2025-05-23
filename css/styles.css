@@ -109,7 +109,7 @@ a:hover {
   
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -121,12 +121,7 @@ a:hover {
     padding: 0 1rem;
     margin-top: -100px;
 }
-.faq-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
+
 
 *{
     box-sizing: border-box;
@@ -156,12 +151,6 @@ a:hover {
     width: 476px;
     height: 470px;
     top: 968px;
-}
-.faq-column {
-    flex: 60%;
-    padding: 60px 0px 0px 0px;
-    height: 500px; 
-    margin: 0px 0px 0px 0px;
 }
 
 .column1 {
@@ -199,29 +188,6 @@ a:hover {
     height: 400px;
     margin-bottom: 50px; 
 
-}
-.column5 {
-    position: sticky;
-    flex: 50%;
-    padding-top:  0px;
-    height: 270px;
-    margin: 120px 150px 0px 0px;
-    border:solid color black;
-    background-color: #E2725B;
-    border-radius: 40px;
-    width: 370px;
-
-}
-.Faq-image {
-    left: 0;
-    height: 300px;
-    transform: translateY(0%);
-    width: 250px;
-    pointer-events: none;
-    margin: -380px 0px 90px 60px;
-    
-    border-radius: 40px;
-    overflow: hidden;
 }
 
 
@@ -384,32 +350,24 @@ a:hover {
 }
 .contact-btn {
     display: inline-block;
-    background-color: rgb(30, 218, 23);
-    color: var(--white);
-    padding: 0.8rem 8.0rem;
-    border: none;
+    background-color: rgb(247, 202, 147);
+    color: black;
+    padding: 15px 39px 15px 39px;
+    border: solid 1px blue;
     border-radius: 40px;
     cursor: pointer;
     transition: var(--transition);
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
+    width: 450px;
+    height: 54px;
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 100%;
 
 }
-.footer-btn {
-    display: inline-block;
-    background-color: #d65f47;
-    color: var(--white);
-    padding: 0.8rem 8.0rem;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: var(--transition);
-    font-weight: 800;
-    text-align: center;
-    margin-left: 90px;
-    margin-top: -20px;
-    font-size: 1.0rem;
-}
+
 .btn0 {
     display: inline-block;
     background-color: rgb(17, 0, 255);
@@ -502,15 +460,13 @@ a:hover {
     color: white;
 }
 .contact-btn:hover{
-    background-color: rgb(222, 9, 241);
+    background-color: rgb(21, 9, 75);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    color: white;
+    border: solid 1px white;
 }
-.footer-btn:hover{
-    background-color: rgb(71, 9, 241);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
+
 .btn0:hover {
     background-color: rgb(209, 233, 162);
     color: #070707;
@@ -646,38 +602,72 @@ header {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-.contact-container {
+.contact {
     width: 100%;
-    max-width: 1200px;
+    width: 1240px;
     margin: 0 auto;
     padding: 0 1rem;
     text-align: center;
-    border-radius: 40px;
-    background-color: bisque;
-    height: 600px;
+    border-radius: 1px;
+    height: 956px;
 }
-/* Contact Section */
-.contact-legend{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-.contact-footer{
-    text-align: start;
-    margin-top: 14rem;
-    font-size: 1.2rem;
-    position:absolute;
-    font-weight: bold;
-}
-.contact-title{
-    text-align: start;
-    margin-top: 40px;
-    font-size: 2rem;
+.contact-title2 {
+    margin-bottom: 0.4rem;
+    left: 400px;
+    line-height: 100%;
+    width: 440px;
+    height: 124px;
+    font-size: 52px; 
+    line-height: 100%; 
+    font-weight: 700;  
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    vertical-align: middle;
 }
 
-.text-center1{
+.contact-container {
+    width: 100%;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem;
     text-align: center;
+    border-radius: 50px;
+    background-color: bisque;
+    height: 627px;
+}
+/* Contact Section */
+.contact-legend {
+    margin-bottom: 20px;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+.contact-title {
+    text-align: start;
+    margin-top: 40px;
+    font-size: 30px;
+    width: 289px;
+    height: 36px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+
+.contact p {
+    text-align: center;
+    width: 563px;
+    margin: 0 auto;
+    height: 68px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+    place-items: center;
+    margin-bottom: 80px;
 }
 .text-center{
     text-align: start;
@@ -702,10 +692,27 @@ header {
 .contact-info h3 {
     color: var(--primary);
     margin-bottom: 1.5rem;
+    width: 247px;
+    height: 36px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
 }
 
 .contact-info p {
     margin-bottom: 2rem;
+    text-align: start;
+    margin: 10rem 0rem 0rem 0rem;
+    width: 365px;
+    height: 34px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+    place-items: start;
+    place-content: start;
 }
 
 .contact-details div {
@@ -722,8 +729,10 @@ header {
 .contact-form {
     background-color: #E2725B;
     padding: 2rem;
-    border-radius: 40px;
-    margin: -250px -550px 0px 550px;
+    border-radius: 50px;
+    margin: -450px -440px 0px 600px;
+    width: 550px;
+    height: 401px;
 }
 .contact-item {
     display: flex;
@@ -735,18 +744,21 @@ header {
 .contact-item:hover {
     background: #e9ecef;
     transform: translateX(5px);
+    width: 262px;
 }
 
-.contact-item i {
-    width: 10px;
-    color: #3498db;
-    font-size: 1.1rem;
-}
+
 
 .contact-item a, .contact-item span {
-    margin-left: 10px;
+    margin-left: 0px;
     color: #333;
     text-decoration: none;
+    width: 262px;
+    height: 34px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    left: 0.5px;
 }
 
 .contact-item a:hover {
@@ -779,14 +791,61 @@ header {
 }
 
 /* FAQ Section */
+
 .faq {
     background-color: var(--light-gray);
-    margin-bottom: 180px;
+    margin-top: 0px;
+    width: 100%;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 900px;
+}
+.faq-column {
+    flex: 60%;
+    padding: 60px 0px 0px 0px;
+    height: 500px; 
+    margin: 0px 0px 0px 0px;
+}
+.faq-column5 {
+    position: sticky;
+    flex: 50%;
+    padding-top:  0px;
+    height: 400px;
+    margin: 0px 150px 0px 0px;
+    border:solid color black;
+    background-color: #E2725B;
+    border-radius: 60px;
+    width: 385px;
+
 }
 .faq-title {
     text-align: start;
-    margin-left: 130px;
-    margin-bottom: -30px;
+    margin: 80px 0px -30px 40px;
+    width: 90px;
+    height: 17px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+}
+.faq h2 {
+    text-align: start;
+    width: 440px;
+    height: 124px;
+    font-size: 52px; 
+    line-height: 100%; 
+    font-weight: 700;  
+    letter-spacing: 0.5px;
+}
+.faq p {
+    text-align: start;
+    width: 476px;
+    height: 102px;
+    font-size: 22px; 
+    line-height: 34px; 
+    font-weight: 400;  
+    letter-spacing: 0.5px;
 }
 
 .accordion {
@@ -833,6 +892,16 @@ header {
 .accordion-content:hover {
     border: solid 2px rgb(225, 7, 245);
     background-color: bisque;
+}
+.Faq-image {
+    left: 0;
+    height: 574px;
+    transform: translateY(0%);
+    width: 376px;
+    pointer-events: none;
+    margin: -600px 0px 90px 5px;
+    border-radius: 40px;
+    overflow: hidden;
 }
 
 /* Community Section */
@@ -1549,13 +1618,25 @@ footer {
     color: rgb(17, 16, 16);;
     padding: 4rem 0 2rem;
 }
-.footer-title{
+.footer-container {
+    width: 100%;
+    width: 1240px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.footer-title {
     
     color: rgb(24, 22, 22);
     padding: 0rem 0rem;
     margin-top: -50px; 
-    font-size: 1.1rem;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: 700;
+    width: 111px;
+    height: 40px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
 }
 
 .footer-grid {
@@ -1569,11 +1650,11 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
-    border-radius: 40px;
+    border-radius: 50px;
     background-color: #ac4631;
     padding: 60px 40px;
-    height: 400px;
-    width: 100%;
+    height: 460px;
+    width: 570px;
     
 }
 
@@ -1593,25 +1674,34 @@ footer {
     height: 2px;
     background-color: var(--primary);
 }
-.footer-col3{
+.footer-col3 {
     flex: 50%;
     background-color: rgb(243, 197, 141);
     text-align: start;
     padding: 0px;
-    border-radius: 40px;
+    border-radius: 50px;
     color: black;
-    margin: -420px -610px -200px 650px;
-    height: 400px;
+    margin: -430px -610px -200px 650px;
+    height: 460px;
+    width: 620px;
     font-weight: bolder;
 }
 .footer-col2 {
     color: #070707;
     font-weight: bold;
 }
-.footer-para{
+.footer-para {
     padding: 60px;
     font-size: 2rem;
     font-weight: bold;
+    width: 295px;
+    height: 212px;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+
 }
 
 .footer-links {
@@ -1626,7 +1716,13 @@ footer {
 }
 
 .footer-links a {
-    color: var(--secondary);
+    color: white;
+    width: 53px;
+    height: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
 }
 
 .footer-links a:hover {
@@ -1645,10 +1741,10 @@ footer {
     justify-content: center;
     width: 30px;
     height: 30px;
-    background-color: rgba(27, 7, 7, 0.1);
+    background-color: #E2725B;
     border-radius: 50%;
     margin-right: 1rem;
-    color: rgb(241, 239, 239);
+    color: rgb(255, 252, 252);
     border: solid 1px black;
     transition: var(--transition);
 }
@@ -1663,8 +1759,40 @@ footer {
     text-align: start;
     padding: 40px;
     margin-top: -160px;
-    font-size: 1.3rem;
+    font-size: 18px;
+    width: 590px;
+    height: 22px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
 
+}
+.footer-btn {
+    display: inline-block;
+    background-color: #d65f47;
+    color: var(--white);
+    padding: 15px 39px 15px 39px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 120px;
+    font-size: 20px;
+    width: 480px;
+    height: 54px;
+    line-height: 100%;
+    text-transform: capitalize;
+
+
+}
+.footer-btn:hover{
+    background-color: rgb(71, 9, 241);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
 .decor-left, .decor-right {
   flex-shrink: 0; /* Prevents images from shrinking */
