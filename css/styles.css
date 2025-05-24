@@ -1997,75 +1997,73 @@ footer {
 /* CTA Section - Mobile First Approach */
 
 /* Default styles (mobile) */
-fieldset.cta {
-    margin-top: 80px;
-    padding: 0;
-    border: none;
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .section-cta {
+        padding: 2rem 0;
+    }
+    
+    .section-title {
+        font-size: 32px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .text-center {
+        width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .mental-right {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 30px auto;
+        top: 0;
+    }
+    
+    .hand-right {
+        display: none;
+    }
+    
+    .cta-btn {
+        max-width: 280px;
+    }
 }
 
-legend.leg-title {
-    margin: 0 auto 30px;
-    text-align: center;
-    font-size: 0.8rem;
-    position: relative;
-    left: auto;
-}
-
-.cta-container {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    padding: 0 1rem;
-}
-
-.row {
-    flex-direction: column;
-}
-
-.cta-column, .column1 {
-    flex: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 2rem 1rem;
-    height: auto;
-}
-
-.column1 {
-    order: -1; /* Image first on mobile */
-    border-radius: 20px;
-    margin-bottom: 2rem;
-}
-
-.mental-right {
-    width: 100%;
-    height: auto;
-    max-width: 350px;
-    margin: 0 auto;
-    display: block;
-}
-
-.hand-right {
-    display: none; /* Hide secondary image on mobile */
-}
-
-.section-title {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-
-.text-center {
-    text-align: center;
-    margin: 1.5rem 0;
-}
-
-.cta-btn {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-}
-
-/* Tablet (768px - 991px) */
-@media (min-width: 768px) {
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-cta {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 42px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .text-center {
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .mental-right {
+        width: 300px;
+        height: auto;
+        margin: 50px auto;
+    }
+    
+    .hand-right {
+        max-width: 150px;
+        margin: 0 0 150px -200px;
+    }
+    
     legend.leg-title {
         margin-left: 2rem;
         text-align: left;
@@ -2076,7 +2074,7 @@ legend.leg-title {
     }
     
     .column1 {
-        order: 1; /* Image back to right side */
+        order: 1;
         margin-bottom: 0;
     }
     
@@ -2084,17 +2082,32 @@ legend.leg-title {
         padding: 3rem 2rem;
     }
     
-    .section-title {
-        font-size: 2.5rem;
-    }
-    
     .mental-right {
         max-width: 400px;
     }
 }
 
-/* Small Desktop (992px - 1199px) */
-@media (min-width: 992px) {
+/* Small Desktop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .section-title {
+        font-size: 48px;
+        width: 380px;
+    }
+    
+    .text-center {
+        width: 400px;
+    }
+    
+    .mental-right {
+        width: 320px;
+        height: 450px;
+    }
+    
+    .hand-right {
+        max-width: 180px;
+        margin: 0 0 180px -220px;
+    }
+    
     .cta-container {
         width: 90%;
         max-width: 1140px;
@@ -2107,10 +2120,6 @@ legend.leg-title {
     .cta-column {
         width: 55%;
         padding: 4rem 2rem;
-    }
-    
-    .section-title {
-        font-size: 3rem;
     }
     
     .hand-right {
@@ -2157,6 +2166,27 @@ legend.leg-title {
 
 /* Extra Large Screens (1600px and up) */
 @media (min-width: 1600px) {
+    .section-title {
+        font-size: 58px;
+        width: 500px;
+    }
+    
+    .text-center {
+        width: 520px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    .mental-right {
+        width: 400px;
+        height: 563px;
+    }
+    
+    .hand-right {
+        max-width: 220px;
+        margin: 0 0 220px -300px;
+    }
+    
     .cta-container {
         max-width: 1300px;
     }
@@ -2170,8 +2200,30 @@ legend.leg-title {
     }
 }
 
-/* Landscape Orientation for Tablets */
+/* Landscape Orientation Adjustments */
 @media (max-width: 991px) and (orientation: landscape) {
+    .section-cta {
+        padding: 2rem 0;
+    }
+    
+    .mental-right {
+        max-width: 250px;
+    }
+    
+    .hand-right {
+        max-width: 120px;
+        margin: 0 0 120px -150px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .text-center {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
     .cta-column, .column1 {
         padding: 1.5rem;
     }
