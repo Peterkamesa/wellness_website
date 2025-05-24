@@ -2009,10 +2009,10 @@ footer {
         grid-template-columns: 1fr;
         height: auto;
     }
-    .hero-content {
-    flex-direction: column; /* Stacks items vertically */
+ /*   .hero-content {
+    flex-direction: column; /* Stacks items vertically 
     gap: 1rem;
-  }
+  }*/
   .decor-left, .decor-right {
     width: 50%; /* Smaller images on medium screens */
   }
