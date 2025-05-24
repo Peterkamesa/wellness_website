@@ -1815,6 +1815,186 @@ footer {
 }
 
 /* Responsive Styles */
+/* Mobile First Approach (up to 767px) */
+@media (max-width: 767px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.5rem 0;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        transition: var(--transition);
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 1rem 0;
+    }
+    
+    .hamburger {
+        display: block;
+        padding: 0 1rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 4rem 0;
+    }
+    
+    .container1 {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        margin-top: 40px;
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .h1 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .p1 {
+        font-size: 1rem;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Show only one image on mobile */
+    .decor-left {
+        display: none; /* Hide left image */
+    }
+    
+    .decor-right {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        border-radius: 30px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Navigation */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 1rem;
+    }
+    
+    /* Hero Section */
+    .container1 {
+        width: 95%;
+        height: auto;
+        padding: 2rem;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Show only one image on tablet */
+    .decor-left {
+        display: none; /* Hide left image */
+    }
+    
+    .decor-right {
+        position: relative;
+        width: 60%;
+        height: auto;
+        margin: 2rem auto;
+        border-radius: 40px;
+    }
+}
+
+/* Small Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container1 {
+        width: 95%;
+    }
+    
+    /* Show both images but smaller */
+    .decor-left {
+        width: 250px;
+        height: 380px;
+    }
+    
+    .decor-right {
+        width: 300px;
+        height: 450px;
+    }
+}
+
+/* Large Desktop (1200px and up) - default styles apply */
+@media (min-width: 1200px) {
+    /* Both images visible at full size */
+    .decor-left {
+        display: block;
+    }
+    
+    .decor-right {
+        display: block;
+    }
+}
+
+/* Special cases for very large screens */
+@media (min-width: 1600px) {
+    .container1 {
+        max-width: 1400px;
+    }
+}
+
+/* Orientation adjustments */
+@media (max-width: 991px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        padding: 2rem 0;
+    }
+    
+    .container1 {
+        height: auto;
+    }
+    
+    .decor-right {
+        width: 40%;
+    }
+}
 @media (max-width: 768px) {
     .partners-header {
         gap: 1rem;
@@ -1875,41 +2055,11 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        align-items: start;
-    }
 
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 50%;
-        height: calc(100vh - 80px);
-        background-color: var(--white);
-        flex-direction: column;
-        align-items: start;
-        padding: 2rem 0;
-        transition: var(--transition);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 1rem 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
 
     .section-title {
         font-size: 1.8rem;
@@ -1924,9 +2074,7 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+
 
     .section {
         padding: 3rem 0;
@@ -1949,99 +2097,7 @@ footer {
       margin-top: 1.5rem;
     }
   }
-/*nav and nav links*/
-  @media (max-width: 992px) {
-    .logo {
-        padding: 0 50px;
-    }
-}
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 1rem;
-    }
-
-    .logo {
-        padding: 0 20px;
-        font-size: 1.5rem;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 50%;
-        height: calc(100vh - 70px);
-        background-color: var(--white);
-        flex-direction: column;
-        align-items: start;
-        padding: 2rem 0;
-        transition: var(--transition);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 1rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        align-items: start;
-    }
-}
-/*hero section*/
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .container1 {
-        flex-direction: column;
-        grid-template-columns: 1fr;
-        height: auto;
-    }
- /*   .hero-content {
-    flex-direction: column; /* Stacks items vertically 
-    gap: 1rem;
-  }*/
-  .decor-left, .decor-right {
-    width: 50%; /* Smaller images on medium screens */
-  }
-
-
-
-    .hero {
-        height: auto;
-        padding: 6rem 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .decor-left {
-        display: none; /* Hide decorative elements on small screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .btn {
-        padding: 0.5rem 1rem;
-    }
-}
 
 /*faq section*/
 @media (max-width: 992px) {
