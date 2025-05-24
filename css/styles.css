@@ -1831,8 +1831,9 @@ footer {
     }
 }
 
-@media (max-width: 1200px) {
-    .container, .container1, .container2, .faq-container, .contact-container {
+@media (max-width: 1420px) {
+    .container, .cta-container, .services, .testimonials-container, .partners-section, .resource-container, 
+    .community, .faq, .footer-container, .container1, .container2, .faq-container, .contact-container {
         padding: 0 2rem;
     }
 }
@@ -1888,11 +1889,11 @@ footer {
         position: fixed;
         top: 80px;
         left: -100%;
-        width: 100%;
+        width: 50%;
         height: calc(100vh - 80px);
         background-color: var(--white);
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         padding: 2rem 0;
         transition: var(--transition);
     }
@@ -1968,11 +1969,11 @@ footer {
         position: fixed;
         top: 70px;
         left: -100%;
-        width: 100%;
+        width: 50%;
         height: calc(100vh - 70px);
         background-color: var(--white);
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         padding: 2rem 0;
         transition: var(--transition);
     }
@@ -2025,7 +2026,7 @@ footer {
         font-size: 2rem;
     }
 
-    .decor-right,.decor-left {
+    .decor-left {
         display: none; /* Hide decorative elements on small screens */
     }
 }
@@ -2063,7 +2064,7 @@ footer {
         padding: 20px 20px 10px 10px; 
         margin-left: 0; 
         width: 100%; 
-         /*box-sizing: border-box; Include padding in width calc */
+        box-sizing: border-box; /*Include padding in width calc */
         overflow: visible;
         position: relative; 
         left: 0; 
@@ -2165,6 +2166,7 @@ footer {
 @media (max-width: 768px) {
     .footer-grid1 {
         grid-template-columns: 1fr;
+        height: auto;
     }
 
     .footer-bottom {
