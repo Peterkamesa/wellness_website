@@ -1869,9 +1869,9 @@ footer {
     }
 
     .cta-column, .column1, .column4, .column2, .accordion-column {
-        width: 100% !important;
-        padding: 1rem !important;
-        margin: 0 !important;
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
     }
 
     .section-title, .section-title2 {
@@ -1891,13 +1891,10 @@ footer {
         width: 100%;
         max-width: 300px;
         height: auto;
-        margin: 1rem auto !important;
-        position: static !important;
+        margin: 1rem auto;
+        position: static;
     }
 
-    .hand-right {
-        display: none;
-    }
 
     .services-grid, .services-grid1, .resources-grid {
         grid-template-columns: 1fr;
@@ -1919,8 +1916,8 @@ footer {
     }
 
     .footer-col3 {
-        margin: 2rem 0 !important;
-        width: 100% !important;
+        margin: 2rem 0;
+        width: 100%;
     }
 
     .contact-grid {
@@ -1928,8 +1925,8 @@ footer {
     }
 
     .contact-form {
-        margin: 1rem 0 !important;
-        width: 100% !important;
+        margin: 1rem 0;
+        width: 100%;
     }
 }
 
