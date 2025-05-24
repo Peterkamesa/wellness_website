@@ -1811,7 +1811,283 @@ footer {
   max-width: 100%; /* Ensures images don't overflow */
   height: auto; /* Maintains aspect ratio */
 }
+/* Mobile First Base Styles (All screen sizes) */
+/* All your existing base styles go here */
 
+/* Extra Small Devices (Phones, 320px - 575px) */
+@media (max-width: 575px) {
+    .container1, .container, .cta-container, .services, .testimonials-container, 
+    .partners-section, .resource-container, .community, .faq, .contact, 
+    .contact-container, .footer-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .h1 {
+        font-size: 2.5rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+    }
+
+    .p1 {
+        font-size: 1.1rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .cta-column, .column1, .column4, .column2, .accordion-column {
+        width: 100% !important;
+        padding: 1rem !important;
+        margin: 0 !important;
+    }
+
+    .section-title, .section-title2 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .text-center, .services-text, .resource-text {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .mental-right, .decor-left, .decor-right, .wellness, .coacher, .Faq-image, .footer-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 1rem auto !important;
+        position: static !important;
+    }
+
+    .hand-right {
+        display: none;
+    }
+
+    .services-grid, .services-grid1, .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card0, .service-card, .service-card1, .resource-card, 
+    .resource-card1, .resource-card2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonial, .testimonial1 {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .footer-grid, .footer-grid1 {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col3 {
+        margin: 2rem 0 !important;
+        width: 100% !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        margin: 1rem 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* Small Devices (Landscape Phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container1, .container, .cta-container {
+        width: 540px;
+    }
+
+    .h1 {
+        font-size: 3rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card0, .service-card {
+        width: 100%;
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium Devices (Tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container1, .container, .cta-container {
+        width: 720px;
+    }
+
+    .h1 {
+        font-size: 3.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card0, .service-card {
+        width: 100%;
+    }
+
+    .mental-right {
+        width: 300px;
+    }
+
+    .hand-right {
+        width: 150px;
+        margin: 0 0 150px -200px;
+    }
+
+    .footer-grid1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Devices (Laptops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container1, .container, .cta-container {
+        width: 960px;
+    }
+
+    .h1 {
+        font-size: 4rem;
+    }
+
+    .mental-right {
+        width: 320px;
+    }
+
+    .hand-right {
+        width: 180px;
+        margin: 0 0 180px -220px;
+    }
+}
+
+/* Extra Large Devices (Desktops, 1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container1, .container, .cta-container {
+        width: 1140px;
+    }
+}
+
+/* Super Large Devices (Large Desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container1, .container, .cta-container {
+        width: 1240px;
+    }
+
+    .mental-right {
+        width: 400px;
+    }
+
+    .hand-right {
+        width: 220px;
+        margin: 0 0 220px -300px;
+    }
+}
+
+/* Special Cases */
+/* Landscape Orientation for Tablets */
+@media (max-width: 991px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    .section-cta {
+        padding: 2rem 0;
+    }
+
+    .mental-right {
+        max-width: 250px;
+    }
+
+    .hand-right {
+        max-width: 120px;
+        margin: 0 0 120px -150px;
+    }
+}
+
+/* High Resolution Displays */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    /* High-res specific styles */
+    body {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+
+    .navbar, .footer, .testimonial-slider, .slider-controls {
+        display: none;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+    }
+}
 /* Responsive Styles */
 /* Mobile First Approach (up to 767px) */
 
