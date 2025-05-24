@@ -1804,12 +1804,12 @@ footer {
     border-radius: 60px;
     margin: -240px 0px 0px 390px;
 }
-.decor-left, .decor-right {
-  flex-shrink: 0; /* Prevents images from shrinking */
-}
+/*.decor-left, .decor-right {
+  flex-shrink: 0; /* Prevents images from shrinking 
+} */
 
 /* Responsive Images */
-.decor-left img, .decor-right img {
+.decor-left, .decor-right {
   max-width: 100%; /* Ensures images don't overflow */
   height: auto; /* Maintains aspect ratio */
 }
@@ -1883,6 +1883,7 @@ footer {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        align-items: start;
     }
 
     .nav-links {
@@ -1988,6 +1989,7 @@ footer {
 
     .hamburger {
         display: block;
+        align-items: start;
     }
 }
 /*hero section*/
@@ -2002,7 +2004,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .container1, .decor-left {
+    .container1 {
         flex-direction: column;
         grid-template-columns: 1fr;
         height: auto;
@@ -2180,7 +2182,7 @@ footer {
         padding: 2rem;
     }
 
-    .community-img, .wellness, .decor-left {
+    .community-img, .wellness, .decor-left, .decor-right {
         height: auto;
         margin: 1rem 0;
     }
