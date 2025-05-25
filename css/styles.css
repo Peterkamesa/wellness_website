@@ -2685,3 +2685,167 @@ footer {
 .partners-scroll-container::-webkit-scrollbar-thumb:hover {
     background: rgba(177, 54, 54, 0.7);
 }
+
+/* Resources Section - Mobile First (up to 767px) */
+@media (max-width: 767px) {
+    fieldset.resources {
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+
+    legend.explore {
+        margin: 0 auto 1rem;
+        text-align: center;
+    }
+
+    .resource-container {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .resources h2 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .resource-text {
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0 auto 2rem;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .resource-card,
+    .resource-card1,
+    .resource-card2 {
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+        margin: 0 auto;
+    }
+
+    .resource-content {
+        padding: 1.5rem;
+    }
+
+    .resource-content h3 {
+        font-size: 1.5rem;
+        height: auto;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    .resource-content p {
+        font-size: 1rem;
+        height: auto;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn0, .btn1, .btn2 {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .resource-container {
+        width: 95%;
+        padding: 0 1rem;
+    }
+
+    .resources h2 {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .resource-text {
+        width: 80%;
+        font-size: 1.1rem;
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resource-card,
+    .resource-card1,
+    .resource-card2 {
+        width: 100%;
+        height: 380px;
+    }
+
+    .resource-card2 {
+        grid-column: span 2;
+        width: calc(100% - 1rem);
+        margin: 0 auto;
+    }
+}
+
+/* Small Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .resource-container {
+        width: 95%;
+    }
+
+    .resources h2 {
+        font-size: 3rem;
+    }
+
+    .resource-card,
+    .resource-card1,
+    .resource-card2 {
+        width: 100%;
+        height: 420px;
+    }
+}
+
+/* Large Desktop (1200px and up) - Default styles apply */
+@media (min-width: 1200px) {
+    /* Base styles remain unchanged */
+    .resource-container {
+        max-width: 1241px;
+    }
+}
+
+/* Extra Large Screens (1600px and up) */
+@media (min-width: 1600px) {
+    .resource-container {
+        max-width: 1400px;
+    }
+
+    .resources h2 {
+        font-size: 3.5rem;
+    }
+
+    .resource-card,
+    .resource-card1,
+    .resource-card2 {
+        width: 420px;
+        height: 450px;
+    }
+}
+
+/* Hover effects remain the same across all sizes */
+.resource-card:hover,
+.resource-card1:hover,
+.resource-card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.resource-content h3:hover {
+    transform: translateY(-5px);
+}
