@@ -1933,7 +1933,8 @@ footer {
 /* Small Devices (Landscape Phones, 576px - 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
     .container1, .container, .cta-container {
-        width: 540px;
+        width: 100%;
+        height: auto;
     }
 
     .h1 {
@@ -1946,14 +1947,17 @@ footer {
 
     .service-card0, .service-card {
         width: 100%;
+        height: auto;
     }
 
     .resources-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        height: auto;
     }
 
     .footer-grid1 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        height: auto;
     }
 }
 
