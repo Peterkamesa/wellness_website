@@ -1886,13 +1886,24 @@ footer {
 @media (min-width: 768px) and (max-width: 991px) {
     /* Navigation */
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        width: 100%;
     }
-    
-    .nav-links li {
-        margin: 0.5rem 1rem;
+
+    .nav-links.active {
+        display: flex;
     }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        padding: 0;
+        margin: 0 auto;
+    }
+
     
     /* Hero Section */
     .container1 {
@@ -1973,5 +1984,212 @@ footer {
     
     .decor-right {
         width: 40%;
+    }
+}
+
+/* CTA Section - Mobile First (up to 767px) */
+@media (max-width: 767px) {
+    fieldset.cta {
+        margin-top: 60px;
+        padding: 0 1rem;
+    }
+
+    .leg-title {
+        margin: 0 auto 20px;
+        text-align: center;
+        left: 0;
+    }
+
+    .cta-container {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .row {
+        flex-direction: column-reverse; /* Image first on mobile */
+    }
+
+    .cta-column, .column1 {
+        width: 100%;
+        margin: 0;
+        padding: 1.5rem;
+        height: auto;
+        flex: 100%;
+    }
+
+    .column1 {
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .text-center {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .mental-right {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+        top: 0;
+    }
+
+    .hand-right {
+        display: none; /* Hide on mobile */
+    }
+
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .cta-container {
+        width: 95%;
+        height: auto;
+        margin-top: -50px;
+    }
+
+    .row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cta-column {
+        padding: 2rem;
+        width: 55%;
+        margin-left: 0;
+    }
+
+    .column1 {
+        width: 45%;
+        height: auto;
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .text-center {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .mental-right {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .hand-right {
+        max-width: 150px;
+        margin: 0 0 150px -180px;
+    }
+}
+
+/* Small Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cta-container {
+        width: 95%;
+        height: auto;
+    }
+
+    .cta-column {
+        width: 50%;
+        padding: 3rem 2rem;
+    }
+
+    .column1 {
+        width: 45%;
+        height: 500px;
+    }
+
+    .mental-right {
+        width: 320px;
+        height: 420px;
+    }
+
+    .hand-right {
+        max-width: 180px;
+        margin: 0 0 180px -220px;
+    }
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    /* Base styles apply */
+    .cta-container {
+        width: 1140px;
+        height: 564px;
+    }
+
+    .column1 {
+        width: 550px;
+        height: 564px;
+    }
+}
+
+/* Extra Large Screens (1600px and up) */
+@media (min-width: 1600px) {
+    .cta-container {
+        max-width: 1300px;
+    }
+
+    .column1 {
+        width: 600px;
+    }
+
+    .mental-right {
+        width: 380px;
+        height: 520px;
+    }
+
+    .hand-right {
+        max-width: 220px;
+        margin: 0 0 220px -280px;
+    }
+}
+
+/* Landscape Orientation for Tablets */
+@media (max-width: 991px) and (orientation: landscape) {
+    .cta-container {
+        height: auto;
+    }
+
+    .column1 {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .mental-right {
+        max-width: 280px;
+    }
+
+    .hand-right {
+        max-width: 140px;
+        margin: 0 0 140px -160px;
     }
 }
