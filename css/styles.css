@@ -3004,3 +3004,166 @@ footer {
         font-size: 2.2rem;
     }
 }
+/* FAQ Section - Mobile First (up to 767px) */
+@media (max-width: 767px) {
+    .faq {
+        width: 100%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .faq-title {
+        margin: 2rem auto 1rem;
+        text-align: center;
+        left: 0;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .faq-column,
+    .accordion-column {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .faq h2 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .faq p {
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .faq-column5 {
+        display: none; /* Hide decorative element on mobile */
+    }
+
+    .Faq-image {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 2rem auto;
+        display: block;
+    }
+
+    .accordion {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .accordion-header {
+        padding: 1rem;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .faq {
+        width: 95%;
+        height: auto;
+    }
+
+    .row {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .faq-column {
+        width: 45%;
+        padding-right: 1rem;
+    }
+
+    .accordion-column {
+        width: 55%;
+    }
+
+    .faq h2 {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .faq p {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .Faq-image {
+        width: 300px;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    .faq-column5 {
+        width: 300px;
+        margin: 0 auto 2rem;
+    }
+}
+
+/* Small Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .faq {
+        width: 95%;
+    }
+
+    .faq h2 {
+        font-size: 3rem;
+    }
+
+    .Faq-image {
+        width: 350px;
+        height: 500px;
+    }
+
+    .faq-column5 {
+        width: 350px;
+    }
+}
+
+/* Large Desktop (1200px and up) - Default styles apply */
+@media (min-width: 1200px) {
+    .faq {
+        width: 1240px;
+    }
+}
+
+/* Extra Large Screens (1600px and up) */
+@media (min-width: 1600px) {
+    .faq {
+        max-width: 1400px;
+    }
+
+    .Faq-image {
+        width: 400px;
+        height: 600px;
+    }
+
+    .faq-column5 {
+        width: 400px;
+    }
+}
+
+/* Accordion Behavior (all sizes) */
+.accordion-header {
+    transition: var(--transition);
+}
+
+.accordion-header:hover {
+    background-color: var(--secondary);
+}
+
+.accordion-content {
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
