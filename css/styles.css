@@ -3046,8 +3046,15 @@ footer {
         margin-bottom: 2rem;
     }
 
+    /* Updated decorative element styling for mobile */
     .faq-column5 {
-        display: none; /* Hide decorative element on mobile */
+        position: relative;
+        width: 80%;
+        height: 200px;
+        margin: 2rem auto;
+        background-color: #E2725B;
+        border-radius: 30px;
+        display: block; /* Ensure it's visible */
     }
 
     .Faq-image {
@@ -3057,15 +3064,19 @@ footer {
         height: auto;
         margin: 2rem auto;
         display: block;
+        top: 0;
+        left: 0;
+        transform: none;
     }
 
     .accordion {
         width: 100%;
-        margin: 0 auto;
+        margin: 2rem auto 0;
     }
 
     .accordion-header {
         padding: 1rem;
+        font-size: 1rem;
     }
 }
 
@@ -3100,15 +3111,17 @@ footer {
         font-size: 1.1rem;
     }
 
+    /* Tablet decorative element */
+    .faq-column5 {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 2rem;
+    }
+
     .Faq-image {
         width: 300px;
         height: auto;
         margin: 2rem auto;
-    }
-
-    .faq-column5 {
-        width: 300px;
-        margin: 0 auto 2rem;
     }
 }
 
@@ -3129,6 +3142,7 @@ footer {
 
     .faq-column5 {
         width: 350px;
+        height: 350px;
     }
 }
 
@@ -3152,18 +3166,6 @@ footer {
 
     .faq-column5 {
         width: 400px;
+        height: 400px;
     }
-}
-
-/* Accordion Behavior (all sizes) */
-.accordion-header {
-    transition: var(--transition);
-}
-
-.accordion-header:hover {
-    background-color: var(--secondary);
-}
-
-.accordion-content {
-    transition: max-height 0.3s ease, padding 0.3s ease;
 }
