@@ -1050,10 +1050,10 @@ legend.community-title {
     padding-top: 1rem;
     padding-bottom: 1rem;
     scroll-behavior: smooth; /* Smooth scrolling */
-    cursor: grab; /* Changes cursor to indicate draggable */
+    cursor: grab; 
 }
 .partners-scroll-container:active {
-    cursor: grabbing; /* Changes cursor when dragging */
+    cursor: grabbing; 
 }
 .partners-logos {
     display: inline-flex;
@@ -2677,9 +2677,8 @@ footer {
     }
 }
 
-/* Large Desktop (1200px and up) - Default styles apply */
+/* Large Desktop (1200px and up)*/
 @media (min-width: 1200px) {
-    /* Base styles remain unchanged */
     .partners-section {
         width: 1240px;
     }
@@ -2702,10 +2701,10 @@ footer {
     }
 }
 
-/* Scrollbar Styling (applies to all sizes) */
+/* Scrollbar Styling */
 .partners-scroll-container::-webkit-scrollbar {
     height: 6px;
-    display: block;
+    display: none;
 }
 
 .partners-scroll-container::-webkit-scrollbar-track {
@@ -2722,7 +2721,7 @@ footer {
     background: rgba(177, 54, 54, 0.7);
 }
 
-/* Resources Section - Mobile First (up to 767px) */
+/* Resources Section */
 @media (max-width: 767px) {
     fieldset.resources {
         padding: 2rem 1rem;
@@ -2848,9 +2847,8 @@ footer {
     }
 }
 
-/* Large Desktop (1200px and up) - Default styles apply */
+/* Large Desktop (1200px and up)*/
 @media (min-width: 1200px) {
-    /* Base styles remain unchanged */
     .resource-container {
         max-width: 1241px;
     }
@@ -2874,7 +2872,7 @@ footer {
     }
 }
 
-/* Hover effects remain the same across all sizes */
+/* Hover effects*/
 .resource-card:hover,
 .resource-card1:hover,
 .resource-card2:hover {
@@ -2885,7 +2883,7 @@ footer {
 .resource-content h3:hover {
     transform: translateY(-5px);
 }
-/* Community Section - Mobile First (up to 767px) */
+/* Community Section*/
 @media (max-width: 767px) {
     .community {
         width: 100%;
@@ -2902,7 +2900,7 @@ footer {
     }
 
     .row {
-        flex-direction: column; /* Image first on mobile */
+        flex-direction: column;
         padding: 0;
     }
 
@@ -3000,7 +2998,7 @@ footer {
     }
 }
 
-/* Large Desktop (1200px and up) - Default styles apply */
+/* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
     .community {
         width: 1240.47px;
@@ -3040,7 +3038,7 @@ footer {
         font-size: 2.2rem;
     }
 }
-/* FAQ Section - Mobile First (up to 767px) */
+/* FAQ Section*/
 @media (max-width: 767px) {
     .faq {
         width: 100%;
@@ -3082,7 +3080,7 @@ footer {
         margin-bottom: 2rem;
     }
 
-    /* Decorative element with contained image */
+    /* faq image */
     .faq-column5 {
         position: relative;
         width: 80%;
@@ -3190,7 +3188,7 @@ footer {
     }
 }
 
-/* Large Desktop (1200px and up) - Default styles apply */
+/* Large Desktop (1200px and up)*/
 @media (min-width: 1200px) {
     .faq {
         width: 1240px;
