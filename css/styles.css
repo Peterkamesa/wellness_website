@@ -64,7 +64,6 @@ a:hover {
 }
 .container1 {
     position: relative;
-    width: 100%;
     width: 1240px;
     margin: 0 auto;
     margin-top: 80px;
@@ -74,7 +73,30 @@ a:hover {
     display: flex;
     align-items: center;
     border-radius: 60px;
-    
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                box-shadow 0.4s ease,
+                border-color 0.3s ease;
+    transform: translateX(0); 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    cursor: pointer; 
+}
+
+
+.container1:hover {
+    transform: translateX(10px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+    border-color: rgba(255, 255, 255, 0.3); 
+}
+.container1-content {
+    transition: transform 0.4s ease;
+}
+
+.container1:hover .container1-content {
+    transform: translateX(8px); 
+}
+.container1:hover {
+    transform: translateX(10px) scale(1.01); 
 }
 
   
@@ -94,7 +116,7 @@ a:hover {
   
   .decor-right {
     position: absolute;
-    right: 0; /* Aligns to the right edge of .hero-content */
+    right: 0; 
     top: 0; 
     height: 500px;
     width: 350px;
@@ -591,10 +613,14 @@ header {
        
 }
 
+
 .hero-content {
     max-width: 1240px;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
+}
+.hero-content :hover{
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: translateX(20px);
 }
 
 .hero h1 {
@@ -674,7 +700,7 @@ header {
     place-items: center;
     margin-bottom: 80px;
 }
-.text-center{
+.text-center {
     text-align: start;
     width: 476px;
     height: 102px;
