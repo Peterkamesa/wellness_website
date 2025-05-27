@@ -141,6 +141,7 @@ a:hover {
     margin: 0 auto;
     padding: 0 1rem;
     margin-top: -100px;
+
 }
 
 
@@ -159,9 +160,9 @@ a:hover {
 }
 .cta-column {
     flex: 60%;
-    padding: 60px 0px 0px 20px;
+    padding: 50px 0px 0px 0px;
     height: 500px; 
-    margin: 0px 0px 0px 80px;
+    margin: 0px 0px 0px 0px;
     width: 476px;
     height: 470px;
     top: 968px;
@@ -177,7 +178,7 @@ a:hover {
     background-color: #E2725B;
     border-radius: 40px;
     z-index: 1;
-    margin: 0px 80px 0px 0px;
+    margin: 0px 0px 0px 0px;
     
 }
 .column {
@@ -232,7 +233,7 @@ a:hover {
     border-radius: 100px;
     pointer-events: none;
     z-index: -1;
-    margin: 0px 0px 200px -270px;
+    margin: 0px 0px 200px -230px;
   }
   .wellness {
     position:absolute;
@@ -564,13 +565,13 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--text);
     
     
 }
 
 .logo span {
-    color: var(--accent);
+    color: var(--text);
 }
 
 .nav-links {
@@ -1429,7 +1430,7 @@ fieldset.services {
     border: 0px solid #ddd;
     border-radius: 8px;
     padding: 0px;
-    margin: 0 auto;
+    margin: 80px auto;
 
 }
 
@@ -1460,8 +1461,8 @@ fieldset.cta {
 
 legend.leg-title {
     text-align: left; 
-    margin-left: 255px; 
-    margin-bottom: 50px;
+    margin-left: 30px; 
+    margin-bottom: 0px;
     padding: 0px 0px 0px 0px; 
     font-size: 0.8rem;
     font-weight: bold;
@@ -1470,8 +1471,9 @@ legend.leg-title {
 }
 
 .testimonial-title {
+    position: absolute;
     text-align: start;
-    margin: 80px 0px -30px 40px;
+    margin: 0px 1300px 500px 0px;
     width: 90px;
     height: 17px;
     font-weight: 500;
@@ -1844,7 +1846,7 @@ footer {
   height: auto; /* Maintains aspect ratio */
 }
 
-/* Mobile First Approach (up to 767px) */
+/* Mobile (up to 767px) */
 @media (max-width: 767px) {
     /* Navigation */
     .nav-links {
@@ -1904,9 +1906,9 @@ footer {
         margin-bottom: 1.5rem;
     }
     
-    /* Show only one image on mobile */
+    /* Showing one image on mobile */
     .decor-left {
-        display: none; /* Hide left image */
+        display: none; /* Hiding left image */
     }
     
     .decor-right {
@@ -1956,9 +1958,9 @@ footer {
         font-size: 2.5rem;
     }
     
-    /* Show only one image on tablet */
+    /* Showing one image on tablet */
     .decor-left {
-        display: none; /* Hide left image */
+        display: none; /* Hiding left image */
     }
     
     .decor-right {
@@ -1976,7 +1978,7 @@ footer {
         width: 95%;
     }
     
-    /* Show both images but smaller */
+    /* Showing both images but smaller */
     .decor-left {
         width: 250px;
         height: 380px;
@@ -1988,7 +1990,7 @@ footer {
     }
 }
 
-/* Large Desktop (1200px and up) - default styles apply */
+/* Large Desktop (1200px and up)*/
 @media (min-width: 1200px) {
     /* Both images visible at full size */
     .decor-left {
@@ -2023,7 +2025,7 @@ footer {
     }
 }
 
-/* CTA Section - Mobile First (up to 767px) */
+/* CTA Section - Mobile(up to 767px) */
 @media (max-width: 767px) {
     fieldset.cta {
         margin-top: 60px;
@@ -2177,7 +2179,6 @@ footer {
 
 /* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
-    /* Base styles apply */
     .cta-container {
         width: 1140px;
         height: 564px;
@@ -2230,7 +2231,7 @@ footer {
         margin: 0 0 140px -160px;
     }
 }
-/* Services Section - Mobile First (up to 767px) */
+/* Services Section*/
 @media (max-width: 767px) {
     fieldset.services {
         width: 100%;
@@ -2384,7 +2385,6 @@ footer {
 
 /* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
-    /* Base styles apply */
     fieldset.services {
         width: 1240px;
         height: 1279px;
@@ -2450,11 +2450,11 @@ footer {
         max-width: 220px;
     }
 }
-/* Testimonials Section - Mobile First (up to 767px) */
+/* Testimonials Section */
 @media (max-width: 767px) {
     .testimonials {
         padding: 2rem 1rem;
-        overflow-x: hidden; /* Prevent horizontal overflow */
+        overflow-x: hidden; /* Prevents horizontal overflow */
     }
 
     .testimonial-title {
@@ -2505,7 +2505,7 @@ footer {
         scroll-snap-type: x mandatory;
         gap: 1rem;
         padding-bottom: 1rem;
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling*/
     }
 
     .testimonial,
@@ -2579,7 +2579,7 @@ footer {
     }
 }
 
-/* Hide scrollbar but keep functionality */
+/* Hiding scrollbar*/
 .slider-container::-webkit-scrollbar {
     display: none;
 }
@@ -2589,7 +2589,7 @@ footer {
     scrollbar-width: none;
 }
 
-/* Large Desktop (1200px and up) - Default styles apply */
+/* Large Desktop (1200px and up)*/
 @media (min-width: 1200px) {
     .slider-container {
         justify-content: center;
@@ -2600,7 +2600,7 @@ footer {
         flex: 0 0 393px;
     }
 }
-/* Partners Section - Mobile First (up to 767px) */
+/* Partners Section */
 @media (max-width: 767px) {
     .partners-section {
         width: 100%;
