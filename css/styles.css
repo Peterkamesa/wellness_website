@@ -44,9 +44,10 @@ p {
 }
 .p1 {
     margin-bottom: 1rem;
+    margin-top: 2rem;
     color: #FFFFFF;
     width: 564px;
-    height: 58px;
+    height: 80px;
     font-size: 24px; 
     line-height: 100%; 
     font-weight: 400;  
@@ -625,13 +626,31 @@ header {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    font-size: clamp(4rem, 10vw, 3rem);
+    font-weight: 900;
+    background: linear-gradient(230deg, bisque, bisque, #2cf304);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 4px 6px rgba(0,0,0,0.2),
+        0 0 8px rgba(255,255,255,0.3);
+    font-family: 'Bricolage Grotesque';
+    text-transform: capitalize;
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1.3rem, 10vw, 1rem);
+    font-weight: 900;
+    background: linear-gradient(40deg, bisque, bisque, #2cf304);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 4px 6px rgba(0,0,0,0.2),
+        0 0 8px rgba(255,255,255,0.3);
+    font-family: 'Bricolage Grotesque';
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
     margin-bottom: 2rem;
 }
 .contact {
@@ -937,8 +956,7 @@ header {
 }
 
 /* Community Section */
-.community { 
-    width: 100%;
+.community {
     width: 1240.47px;
     height: 587px;
     margin: 0 auto;
@@ -1281,7 +1299,7 @@ legend.community-title {
   
   
   .testimonial-slider {
-    width: 100%;
+    width: 50%;
   }
   
   .slider-container {
@@ -1294,7 +1312,7 @@ legend.community-title {
   
   .testimonial {
     flex: 0 0 calc(50% - 1rem);
-    scroll-snap-align: end;
+    scroll-snap-align: start;
     background-color: #E2725B;
     padding: 2rem;
     border-radius: 60px;
@@ -1302,14 +1320,27 @@ legend.community-title {
     text-align: center;
     width: 393px;
     height: 393px;
-    
-    margin-left: 80px;
+    margin-left: 550px;
     
   }
   .testimonial1 {
     
     flex: 0 0 calc(50% - 1rem);
-    scroll-snap-align: end;
+    scroll-snap-align: start;
+    background: bisque;
+    padding: 2rem;
+    border-radius: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 393px;
+    height: 393px;
+  
+
+  }
+    .testimonial2 {
+    
+    flex: 0 0 calc(50% - 1rem);
+    scroll-snap-align: start;
     background: bisque;
     padding: 2rem;
     border-radius: 60px;
@@ -1341,7 +1372,6 @@ legend.community-title {
   .testimonial p {
     margin-bottom: 1rem;
     color: #faf6f6;
-    font-weight: bold;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
@@ -1351,7 +1381,6 @@ legend.community-title {
   .testimonial1 p {
     margin-bottom: 1rem;
     color: black;
-    font-weight: bold;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
@@ -1430,7 +1459,7 @@ fieldset.services {
     border: 0px solid #ddd;
     border-radius: 8px;
     padding: 0px;
-    margin: 80px auto;
+    margin: 120px auto;
 
 }
 
@@ -1473,7 +1502,7 @@ legend.leg-title {
 .testimonial-title {
     position: absolute;
     text-align: start;
-    margin: 0px 1300px 500px 0px;
+    margin: 0px 1120px 500px 0px;
     width: 90px;
     height: 17px;
     font-weight: 500;

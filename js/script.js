@@ -55,40 +55,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Slider Component
 document.addEventListener('DOMContentLoaded', () => {
-  const prevBtn = document.querySelector('.slider-arrow.prev');
-  const nextBtn = document.querySelector('.slider-arrow.next');
-  const slider = document.querySelector('.slider-container'); // Ensure this matches your slider container
-  const slides = document.querySelectorAll('.testimonial');   // Ensure this matches your slide class
+  const prevBtn = document.querySelector('.slider-arrow.prev'); // Previous button
+  const nextBtn = document.querySelector('.slider-arrow1.next'); // Next button (updated class)
+  const slider = document.querySelector('.testimonial-slider'); // Slider container
+  const slides = document.querySelectorAll('.testimonial, .testimonial1, .testimonial2'); // All slides
   let currentIndex = 0;
 
-  if (!slider || !slides.length) return; // Exit if no slider found
+  if (!slider || !slides.length) return;
 
-  // Function to update slider position
-  const updateSlider = () => {
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  // Function to scroll to the current slide
+  const goToSlide = (index) => {
+    const slide = slides[index];
+    slide.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+    currentIndex = index;
   };
 
-  // Previous button click handler
+  // Previous button
   prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-    updateSlider();
+    goToSlide(currentIndex);
   });
 
-  // Next button click handler
+  // Next button
   nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-    updateSlider();
+    goToSlide(currentIndex);
   });
 
-  // Optional: Keyboard navigation
+  // Optional: Keyboard arrows
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prevBtn.click();
     if (e.key === 'ArrowRight') nextBtn.click();
   });
 });
-
     // Form Submission
     const messageForm = document.getElementById('messageForm');
     if (messageForm) {
