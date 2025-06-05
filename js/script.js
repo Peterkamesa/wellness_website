@@ -1,31 +1,61 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation
+    // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const leftLinks = document.querySelector('.left-links');
+    const rightLinks = document.querySelector('.right-links');
     
-    if (hamburger && navLinks) {
+    if (hamburger && leftLinks && rightLinks) {
         hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            // Toggle both navigation groups
+            leftLinks.classList.toggle('active');
+            rightLinks.classList.toggle('active');
+            
+            // Toggle hamburger icon
+            hamburger.classList.toggle('active');
         });
 
         // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                leftLinks.classList.remove('active');
+                rightLinks.classList.remove('active');
+                hamburger.classList.remove('active');
             });
         });
     }
 
-    // Smooth Scrolling
+    // Smooth Scrolling for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            // Skip if the link is just a # (empty anchor)
+            if (this.getAttribute('href') === '#') return;
+            
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
+                // Calculate header height to offset scroll position
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar') && !e.target.closest('.hamburger')) {
+            leftLinks.classList.remove('active');
+            rightLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+});
 
     // Accordion (Single Implementation)
     const accordionHeaders = document.querySelectorAll('.accordion-header');
@@ -54,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
 
 document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.querySelector('.slider-arrow.prev'); // Previous button
@@ -87,11 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     goToSlide(currentIndex);
   });
 
-  // Optional: Keyboard arrows
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') prevBtn.click();
-    if (e.key === 'ArrowRight') nextBtn.click();
-  });
 });
     // Form Submission
     const messageForm = document.getElementById('messageForm');
@@ -111,4 +137,3 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
-});

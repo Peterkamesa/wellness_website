@@ -53,11 +53,70 @@ a {
 a:hover {
     color: var(--accent);
 }
+/* Base Styles */
+/* Header styles remain the same */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Key change */
+    padding: 1rem 1rem;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    position: absolute; /* Absolute positioning for perfect centering */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Allows links to grow and fill available space */
+}
+
+/* Left links alignment */
+.left-links {
+    justify-content: flex-start; /* Pushes items toward the logo */
+    padding-right: 0rem; /* Creates space before logo */
+}
+
+/* Right links alignment */
+.right-links {
+    justify-content: flex-end; /* Pushes items toward the logo */
+    padding-left: 0rem; /* Creates space after logo */
+}
+
+/* Hamburger menu remains the same */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Remove the .split class as we're using flexbox instead */
 .container1 {
     position: relative;
     width: 1240px;
     margin: 0 auto;
-    margin-top: 160px;
+    margin-top: 180px;
     padding: 0 1rem;
     background-color: #E2725B;
     height: 668px;
@@ -571,7 +630,7 @@ a:hover {
 }
 
 
-/* Header */
+/* Header styles remain the same */
 header {
     background-color: var(--white);
     box-shadow: var(--shadow);
@@ -580,29 +639,39 @@ header {
     top: 0;
     z-index: 1000;
 }
+/* Mobile menu active state */
+.left-links.active, 
+.right-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: start;
+    top: 91px; /* Header height */
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+/* Hamburger active state */
+.hamburger.active {
+    color: var(--primary); /* Change color when active */
+}
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Key change */
     padding: 1rem 1rem;
-    max-width: 1240px;
+    width: 1240px;
+    height: 91px;
     margin: 0 auto;
     
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text);
-    
-    
-}
 
-.logo span {
-    color: var(--text);
-}
 
 .nav-links {
     display: flex;
@@ -610,28 +679,44 @@ header {
     align-items: center;
     gap: 2rem;
     margin: 0;
+    padding: 0;
+    flex: 1; /* Allows links to grow and fill available space */
+}
+.nav-links a {
+    color: black;
+    height: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 100%;
+}
+.nav-links :hover {
+    color:#E2725B;
+    transform: translateX(-5px);
+ 
+}
+
+/* Left links alignment */
+.left-links {
+    justify-content: flex-start; /* Pushes items toward the logo */
+    padding-right: 15rem; /* Creates space before logo */
+    justify-content: space-between;
     
 }
 
-.nav-links li {
-    margin-left: 0rem;
+/* Right links alignment */
+.right-links {
+    justify-content: flex-end; /* Pushes items toward the logo */
+    padding-left: 15rem; 
+    justify-content: space-between;
 }
 
-.nav-links a {
-    color: var(--text);
-    font-weight: 800;
-}
-
-.nav-links a:hover {
-    color: var(--primary);
-}
-
+/* Hamburger menu */
 .hamburger {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
 }
-
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
@@ -639,7 +724,7 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center; /* Add this to center the container vertically and horizontally */
+    justify-content: center; /*centers the container vertically and horizontally */
     text-align: center;
     padding-top: 10px;
 }
@@ -653,11 +738,19 @@ header {
     align-items: center; /* Center children horizontally */
     justify-content: center; /* Center children vertically */
     text-align: center;
-    width: 100%;
+
 }
-.hero-content :hover{
+.hero p:hover{
      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      transform: translateX(5px);
+      transform: translateX(-8px);
+}
+.hero h1:hover{
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: translateX(8px);
+}
+.hero-btn:hover{
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: translateX(10px);
 }
 
 .hero h1 {
@@ -1897,7 +1990,7 @@ footer {
     gap: 2rem;
     margin-bottom: 3rem;
     border-radius: 50px;
-    background-color: #ac4631;
+    background-color: #E2725B;
     padding: 60px 40px;
     height: 460px;
     width: 570px;
@@ -2014,7 +2107,7 @@ footer {
 }
 
 .footer-bottom {
-    color: #a0a8a6;
+    color: #b6cac5;
     text-align: start;
     padding: 40px;
     margin-top: -160px;
@@ -2071,7 +2164,117 @@ footer {
   height: auto; /* Maintains aspect ratio */
 }
 
-/* Mobile (up to 767px) */
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+
+/* Medium devices (992px - 1199px) */
+@media (max-width: 1199px) {
+  .navbar {
+    max-width: 960px;
+  }
+  .navbar a {
+    padding: 14px 12px;
+    font-size: 16px;
+  }
+}
+
+/* Small tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .navbar {
+    width: 100%;
+    height: 80px;
+  }
+  .logo {
+    font-size: 1.6rem;
+  }
+  .navbar a {
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+   /* Hero Section */
+    .container1 {
+        width: 1240px;
+        height: auto;
+        padding: 2rem;
+        margin-top: 0px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Showing one image on tablet */
+    .decor-left {
+        display: none; /* Hiding left image */
+    }
+    
+    .decor-right {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 200px;
+        border-radius: 40px;
+    }
+    .coacher {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 1.5rem auto 0;
+        display: block;
+        margin-top: -20px;
+    }
+    .wellness {
+        position: relative;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 1.5rem auto 0;
+        display: block;
+        margin-top: -20px;
+    }
+    .testimonials {
+        padding: 3rem 1.5rem;
+    }
+
+    .testimonials-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .slider-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .testimonial,
+    .testimonial1 {
+        width: 700px;
+        height: 380px;
+    }
+
+    .slider-controls {
+        margin: 2rem auto 0;
+    }
+    
+}
+
+
+/* Phones (576px - 767px) */
 @media (max-width: 767px) {
     /* Navigation */
     .nav-links {
@@ -2097,9 +2300,7 @@ footer {
         margin: 0 auto;
     }
 
-    
-    /* Hero Section */
-    .hero {
+      .hero {
         height: auto;
         padding: 4rem 0;
     }
@@ -2161,6 +2362,33 @@ footer {
     }
 }
 
+/* Small phones (up to 575px) */
+@media (max-width: 575px) {
+  .navbar {
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+  }
+  .logo {
+    font-size: 1.4rem;
+  }
+  .left-links, .right-links {
+    flex-direction: column;
+    background-color: #f8f4f4;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  .navbar a {
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+
+    
 /* Tablet (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     /* Navigation */
@@ -2210,6 +2438,8 @@ footer {
         height: auto;
         margin: 2rem auto;
         border-radius: 40px;
+        margin-top: -200px;
+        margin-bottom: -50px;
     }
 }
 
@@ -2602,13 +2832,13 @@ footer {
     .coacher {
         width: 100%;
         max-width: 220px;
-        margin: 1.5rem auto 0;
+        margin: 0rem auto 0;
     }
 
     .wellness {
         width: 100%;
         max-width: 350px;
-        margin: 1.5rem auto 0;
+        margin: 0 auto 0;
     }
 
     .therapy-btn,
@@ -2790,6 +3020,16 @@ footer {
         gap: 1rem;
     }
 }
+/* Hiding scrollbar*/
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 
 /* Tablet (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2815,14 +3055,23 @@ footer {
     .testimonial,
     .testimonial1 {
         flex: 0 0 calc(50% - 1rem);
-        width: calc(50% - 1rem);
-        min-width: calc(50% - 1rem);
+        width: 100%;
         height: 380px;
     }
 
     .slider-controls {
         margin: 2rem auto 0;
     }
+    /* Hiding scrollbar*/
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 }
 
 /* Small Desktop (992px - 1199px) */
@@ -2841,17 +3090,18 @@ footer {
     .slider-controls {
         margin: -60px 0 0 -450px;
     }
-}
-
-/* Hiding scrollbar*/
-.slider-container::-webkit-scrollbar {
+    /* Hiding scrollbar*/
+    .slider-container::-webkit-scrollbar {
     display: none;
-}
+    }
 
-.slider-container {
+    .slider-container {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    }
+
 }
+
 
 /* Large Desktop (1200px and up)*/
 @media (min-width: 1200px) {
@@ -3197,7 +3447,7 @@ footer {
     .community-img {
         width: 100%;
         height: auto;
-        max-width: 400px;
+        max-width: 500px;
         margin: 0 auto;
         border-radius: 30px;
         margin-top: -80px;
@@ -3215,7 +3465,10 @@ footer {
     .community {
         width: 95%;
         height: auto;
+        margin-top: 350px;
         padding: 2rem;
+        align-items: center;
+        justify-content: center;
     }
 
     .row {
@@ -3248,6 +3501,7 @@ footer {
         height: auto;
         max-width: 400px;
         margin: 0 auto;
+        margin-top: 50px;
     }
 }
 
@@ -3512,7 +3766,7 @@ footer {
         line-height: 1.2;
         margin-bottom: 1rem;
     }
-        .contact-title {
+    .contact-title {
         font-size: 2rem;
         width: 100%;
         height: auto;
@@ -3565,44 +3819,155 @@ footer {
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .contact-container {
-        width: 95%;
-        padding: 2rem;
+    .contact {
+        padding: 2rem 1rem;
+        width: 100%;
         height: auto;
+        margin-top: 450px;
+
     }
 
     .contact-title2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    .contact-title {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 0rem;
+        margin-left: -80px;
     }
 
     .contact p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding: 1rem;
+        height: auto;
+        border-radius: 20px;
     }
 
     .contact-grid {
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
-    .contact-info,
-    .contact-form {
+    .contact-info {
         width: 100%;
-        padding: 1.5rem;
+        padding: 1rem;
+        margin: 0 auto;
+        margin-bottom: -100px;
     }
 
+
     .contact-form {
-        margin: 0;
-        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #E2725B;
+        border-radius: 20px;
+        margin: -200px -440px 0px 400px;
     }
+
 
     .contact-btn {
         width: 100%;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 1rem;
     }
+
+}
+@media (width: 768px) {
+    .contact {
+        padding: 2rem 1rem;
+        width: 768px;
+        height: auto;
+        margin-top: 450px;
+
+    }
+
+    .contact-title2 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    .contact-title {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 0rem;
+        margin-left: -80px;
+    }
+
+    .contact p {
+        font-size: 1rem;
+        line-height: 1.5;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding: 1rem;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+        margin-bottom: -100px;
+    }
+
+
+    .contact-form {
+        width: 90%;
+        margin: 0 auto;
+        background-color: #E2725B;
+        border-radius: 20px;
+        margin: -200px -440px 0px 350px;
+    }
+
+
+    .contact-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .contact-container {
         width: 95%;
+    }
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     .contact-title2 {
@@ -3618,6 +3983,77 @@ footer {
     .contact-btn {
         font-size: 1.1rem;
     }
+}
+@media (width: 1024px) {
+    .contact {
+        padding: 2rem 1rem;
+        width: 768px;
+        height: auto;
+        margin-top: 450px;
+
+    }
+
+    .contact-title2 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    .contact-title {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 0rem;
+        margin-left: -80px;
+    }
+
+    .contact p {
+        font-size: 1rem;
+        line-height: 1.5;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding: 1rem;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+        margin-bottom: -100px;
+    }
+
+
+    .contact-form {
+        width: 90%;
+        margin: 0 auto;
+        background-color: #E2725B;
+        border-radius: 20px;
+        margin: -200px -440px 0px 350px;
+    }
+
+
+    .contact-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
 }
 @media (min-width: 1200px) {
     .contact-container {
@@ -3732,7 +4168,7 @@ footer {
   }
 
   .footer-grid1 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     padding: 2rem;
   }
@@ -3743,6 +4179,7 @@ footer {
     text-align: center;
     height: auto;
     padding: 2rem 1rem;
+    margin-top: 100px;
   }
 
   .footer-image {
@@ -3752,6 +4189,9 @@ footer {
     display: block;
     margin: 1rem auto;
     border-radius: 30px;
+  }
+  .footer-title {
+    margin-top: -30px;
   }
 
   .footer-btn {
