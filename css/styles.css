@@ -189,8 +189,7 @@ header {
     margin: 0 auto;
     padding: 0 1rem;
     margin-top: 40px;
-    margin-bottom: 30px;
-
+    margin-bottom: -20px;
 }
 
 
@@ -450,10 +449,10 @@ header {
 }
 .contact-btn {
     display: inline-block;
-    background-color: rgb(247, 202, 147);
+    background-color: bisque;
     color: black;
     padding: 15px 39px 15px 39px;
-    border: solid 1px blue;
+    border: solid 1px black;
     border-radius: 40px;
     cursor: pointer;
     transition: var(--transition);
@@ -559,10 +558,10 @@ header {
     color: white;
 }
 .contact-btn:hover{
-    background-color: rgb(21, 9, 75);
+    background-color: rgb(250, 216, 184);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
-    color: white;
+    color: black;
     border: solid 1px white;
 }
 
@@ -1459,6 +1458,7 @@ header {
 .testimonials {
     padding: 4rem 0;
     background-color: #f8f9fa;
+    margin-top: -60px;
 
   }
   
@@ -1777,7 +1777,7 @@ legend.explore {
 .services {
     position: relative;
     width: 1240px;
-    height: 1279px;
+    height: 1179px;
     justify-items: center;
     margin: 0 auto;
     padding: 0 1rem;
@@ -2015,7 +2015,7 @@ footer {
 }
 .footer-col3 {
     flex: 50%;
-    background-color: rgb(243, 197, 141);
+    background-color: bisque;
     text-align: start;
     padding: 0px;
     border-radius: 50px;
@@ -2107,7 +2107,7 @@ footer {
 }
 
 .footer-bottom {
-    color: #b6cac5;
+    color: #e5f0ed;
     text-align: start;
     padding: 40px;
     margin-top: -160px;
@@ -2142,9 +2142,11 @@ footer {
 
 }
 .footer-btn:hover{
-    background-color: rgb(71, 9, 241);
+    background-color: bisque;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    color: black;
+    border: solid 1px black;
 }
 .footer-image {
     position: absolute;
@@ -2174,12 +2176,84 @@ footer {
 /* Medium devices (992px - 1199px) */
 @media (max-width: 1199px) {
   .navbar {
-    max-width: 960px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0.5rem; /* Slightly reduce padding */
   }
+  
   .navbar a {
-    padding: 14px 12px;
-    font-size: 16px;
+    padding: 12px 10px; /* Slightly tighter padding */
+    font-size: 15px; /* Slightly smaller font */
   }
+  
+  .nav-links {
+    gap: 0rem; /* Reduce gap between items */
+  }
+  .left-links {
+    justify-content: flex-start; /* Pushes items toward the logo */
+    padding-right: 10rem; /* Creates space before logo */
+    justify-content: space-between;
+    
+}
+
+/* Right links alignment */
+.right-links {
+    justify-content: flex-end; /* Pushes items toward the logo */
+    padding-left: 10rem; 
+    justify-content: space-between;
+}
+  
+  .logo {
+    font-size: 1.7rem; 
+  }
+  
+  .nav-links li a {
+    white-space: nowrap;
+  }
+
+}
+/* Medium devices ( 1024px) */
+@media (width: 1024px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1024px;
+    padding: 0rem 0rem; 
+  }
+  
+  .navbar a {
+    padding: 1px 1px; 
+    font-size: 15px; 
+  }
+  
+  .nav-links {
+    gap: 0rem; /* Reduce gap between items */
+  }
+  .left-links {
+    justify-content: flex-start; /* Pushes items toward the logo */
+    padding-right: 10rem; /* Creates space before logo */
+    justify-content: space-between;
+    
+}
+
+/* Right links alignment */
+.right-links {
+    justify-content: flex-end; /* Pushes items toward the logo */
+    padding-left: 10rem; 
+    justify-content: space-between;
+}
+  
+  .logo {
+    font-size: 1.7rem; /* Slightly smaller logo */
+  }
+  
+  /* Optional: If you want to prevent text wrapping */
+  .nav-links li a {
+    white-space: wrap;
+  }
+
 }
 
 /* Small tablets (768px - 991px) */
@@ -2445,14 +2519,34 @@ footer {
 
 /* Small Desktop (992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: -100px;
+        margin-top: -80px;
+    }
     .container1 {
         width: 95%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
+
     
+    .hero p {
+        width: 50%;
+    }
     /* Showing both images but smaller */
     .decor-left {
-        width: 250px;
+        width: 248px;
         height: 380px;
+        margin-top: 54px;
     }
     
     .decor-right {
@@ -2617,7 +2711,12 @@ footer {
         width: 100%;
         font-size: 1.1rem;
     }
-
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
 
     .mental-right {
         width: 100%;
@@ -2650,8 +2749,10 @@ footer {
     }
 
     .mental-right {
-        width: 320px;
-        height: 420px;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
     }
 
     .hand-right {
@@ -2850,6 +2951,9 @@ footer {
 
 /* Small Desktop (992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .services {
+        width: 100px;
+    }
     fieldset.services {
         width: 95%;
     }
@@ -2857,22 +2961,25 @@ footer {
     .service-card0,
     .service-card {
         width: 480px;
-        height: 500px;
+        height: auto;
     }
 
     .service-card1 {
         width: 100%;
-        height: 500px;
+        height: auto;
     }
 
-    .coacher {
-        width: 220px;
-        margin: 1.5rem 0 0 0;
-    }
-
+    .coacher,
     .wellness {
-        width: 350px;
-        margin: 1.5rem 0 0 0;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: -90px;
+        display: block;
+    }
+        .therapy-btn {
+        margin-top: 1rem;
     }
 }
 
@@ -2946,13 +3053,14 @@ footer {
 /* Testimonials Section */
 @media (max-width: 767px) {
     .testimonials {
+        margin-top: 5px;
         padding: 2rem 1rem;
         overflow-x: hidden; /* Prevents horizontal overflow */
     }
 
     .testimonial-title {
         position: relative;
-        margin: 0rem auto 1rem;
+        margin: 0rem auto 1em;
         text-align: center;
         left: 0;
     }
@@ -3058,6 +3166,12 @@ footer {
         width: 100%;
         height: 380px;
     }
+        .testimonial-title {
+        position: relative;
+        margin: 0rem auto 1em;
+        text-align: center;
+        left: 0;
+    }
 
     .slider-controls {
         margin: 2rem auto 0;
@@ -3076,30 +3190,54 @@ footer {
 
 /* Small Desktop (992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .testimonials {
+        margin-top: 760px;
+   
+    }
+
+    .testimonials-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .testimonial-title {
+        position: relative;
+        margin: 0rem auto 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
     .slider-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
         gap: 2rem;
+        padding-bottom: 1rem;
     }
 
     .testimonial,
     .testimonial1 {
-        flex: 0 0 calc(33.33% - 1.5rem);
-        width: calc(33.33% - 1.5rem);
-        min-width: calc(33.33% - 1.5rem);
+        flex: 0 0 calc(50% - 1rem);
+        width: 100%;
+        height: 380px;
     }
 
     .slider-controls {
-        margin: -60px 0 0 -450px;
+        margin: 2rem auto 0;
     }
     /* Hiding scrollbar*/
-    .slider-container::-webkit-scrollbar {
+.slider-container::-webkit-scrollbar {
     display: none;
-    }
+}
 
-    .slider-container {
+.slider-container {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    }
-
+}
 }
 
 
@@ -3322,6 +3460,11 @@ footer {
         font-size: 2.5rem;
         width: 100%;
     }
+    .resources h3 {
+        font-size: 2.0rem;
+        height: auto;
+        width: 100%;
+    }
 
     .resource-text {
         width: 80%;
@@ -3355,7 +3498,12 @@ footer {
     .resources h2 {
         font-size: 3rem;
     }
-
+        .resource-content h3 {
+        font-size: 1.5rem;
+        height: auto;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
     .resource-card,
     .resource-card1,
     .resource-card2 {
@@ -3681,6 +3829,7 @@ footer {
         width: 300px;
         height: 300px;
         margin: 0 auto 2rem;
+        margin-top: 80px;
     }
 
     .Faq-image {
@@ -3710,6 +3859,7 @@ footer {
     .Faq-image {
         width: auto;
         max-width: 100%;
+        margin: 0 auto;
         height: auto;
         max-height: 330px;
     }
@@ -3961,35 +4111,12 @@ footer {
 
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    .contact-container {
-        width: 95%;
-    }
-    .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .contact-title2 {
-        font-size: 3rem;
-    }
-
-    .contact-form {
-        width: 90%;
-        margin: 0 auto;
-        height: auto;
-    }
-
-    .contact-btn {
-        font-size: 1.1rem;
-    }
-}
-@media (width: 1024px) {
     .contact {
         padding: 2rem 1rem;
-        width: 768px;
+        width: 100%;
         height: auto;
-        margin-top: 450px;
+        margin: 0 auto;
+        margin-top: -20px;
 
     }
 
@@ -4005,7 +4132,82 @@ footer {
         width: 100%;
         height: auto;
         line-height: 1.2;
-        margin-bottom: 0rem;
+        margin-top: 1.0rem;
+        margin-left: -80px;
+    }
+
+    .contact p {
+        font-size: 1rem;
+        line-height: 1.5;
+        width: 50%;
+        height: auto;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding: 1rem;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+        margin-bottom: -100px;
+    }
+    .contact-container p {
+        margin-top: 8rem;
+    }
+
+
+    .contact-form {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #E2725B;
+        border-radius: 20px;
+        margin: -360px -450px 0px 480px;
+    }
+
+
+    .contact-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+}
+@media (width: 1024px) {
+    .contact {
+        padding: 2rem 1rem;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: -20px;
+
+    }
+
+    .contact-title2 {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    .contact-title {
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+        line-height: 1.2;
+        margin-top: 1.0rem;
         margin-left: -80px;
     }
 
@@ -4037,14 +4239,17 @@ footer {
         margin: 0 auto;
         margin-bottom: -100px;
     }
+    .contact-container p {
+        margin-top: 8rem;
+    }
 
 
     .contact-form {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         background-color: #E2725B;
         border-radius: 20px;
-        margin: -200px -440px 0px 350px;
+        margin: -330px -400px 0px 460px;
     }
 
 
@@ -4201,8 +4406,13 @@ footer {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .footer-container {
-    width: 95%;
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-container {
+        width: 100%;
   }
 
   .footer-grid {
@@ -4217,9 +4427,23 @@ footer {
   .footer-col3 {
     width: 100%;
     padding: 2rem;
-    margin: 0;
+    margin: 0 auto;
+    margin-top: 80px;
     height: auto;
     text-align: center;
+    margin-bottom: 20px;
+  }
+    .footer-title {
+    margin-top: -45px;
+  }
+    .footer-para {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    line-height: 1.4;
   }
 
   .footer-image {
@@ -4227,5 +4451,62 @@ footer {
     margin: 1rem auto;
     position: relative;
     display: block;
+  }
+    .footer-btn {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (width: 1024px) {
+    .footer {
+        display: flex;
+    }
+    .footer-container {
+        width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid1 {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  .footer-col3 {
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+    margin-top: 80px;
+    height: auto;
+    text-align: center;
+  }
+    .footer-title {
+    margin-top: -45px;
+  }
+    .footer-para {
+    font-size: 1.5rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    line-height: 1.4;
+  }
+
+  .footer-image {
+    width: 50%;
+    margin: 1rem auto;
+    position: relative;
+    display: block;
+  }
+    .footer-btn {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
   }
 }
