@@ -55,8 +55,8 @@ a {
 a:hover {
     color: var(--accent);
 }
-/* Base Styles */
-/* Header styles remain the same */
+
+/* Header styles  */
 header {
     background-color: var(--white);
     box-shadow: var(--shadow);
@@ -65,14 +65,36 @@ header {
     top: 0;
     z-index: 1000;
 }
+/* Mobile menu active state */
+.left-links.active, 
+.right-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: start;
+    top: 91px; /* Header height */
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+/* Hamburger active state */
+.hamburger.active {
+    color: var(--primary); /* Changes color when active */
+}
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Key change */
+    justify-content: space-between; 
     padding: 1rem 1rem;
-    max-width: 1240px;
+    width: 1240px;
+    height: 91px;
     margin: 0 auto;
+    
 }
 
 .logo {
@@ -93,27 +115,43 @@ header {
     padding: 0;
     flex: 1; /* Allows links to grow and fill available space */
 }
+.nav-links a {
+    color: black;
+    height: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 100%;
+}
+.nav-links :hover {
+    color:#E2725B;
+    transform: translateX(-5px);
+ 
+}
 
 /* Left links alignment */
 .left-links {
-    justify-content: flex-start; /* Pushes items toward the logo */
-    padding-right: 0rem; /* Creates space before logo */
+    justify-content: flex-start; /* Pushes items toward the logo from the left side */
+    padding-right: 15rem; /* Creates space before logo */
+    justify-content: space-between;
+    
 }
 
 /* Right links alignment */
 .right-links {
-    justify-content: flex-end; /* Pushes items toward the logo */
-    padding-left: 0rem; /* Creates space after logo */
+    justify-content: flex-end; /* Pushes items toward the logo from the right side*/
+    padding-left: 15rem; 
+    justify-content: space-between;
 }
 
-/* Hamburger menu remains the same */
+/* Hamburger menu */
 .hamburger {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
 }
 
-/* Remove the .split class as we're using flexbox instead */
+/* hero container*/
 .container1 {
     position: relative;
     width: 1240px;
@@ -277,7 +315,7 @@ header {
   }
 
   .hand-right {
-    position: absolute; /* Makes image fill its container */
+    position: absolute; /* Makes image fill the container */
     height: auto; 
     width: 200px; 
     object-fit: contain; 
@@ -320,8 +358,8 @@ header {
     transition: var(--transition);
     font-weight: 600;
     text-align: center; /* Horizontal centering for text */
-    align-items: center; /* Vertical centering (works with inline-flex) */
-    justify-content: center; /* Horizontal centering (works with inline-flex) */
+    align-items: center; /* Vertical centering*/
+    justify-content: center; /* Horizontal centering */
     margin: 0 auto;
     width: 281px;
     height: 54px;
@@ -630,94 +668,6 @@ header {
         0 0 8px rgba(255,255,255,0.3);
 }
 
-
-/* Header styles remain the same */
-header {
-    background-color: var(--white);
-    box-shadow: var(--shadow);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-/* Mobile menu active state */
-.left-links.active, 
-.right-links.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: start;
-    top: 91px; /* Header height */
-    left: 0;
-    width: 100%;
-    background-color: var(--white);
-    padding: 1rem;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    z-index: 999;
-}
-
-/* Hamburger active state */
-.hamburger.active {
-    color: var(--primary); /* Change color when active */
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Key change */
-    padding: 1rem 1rem;
-    width: 1240px;
-    height: 91px;
-    margin: 0 auto;
-    
-}
-
-
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    flex: 1; /* Allows links to grow and fill available space */
-}
-.nav-links a {
-    color: black;
-    height: 22px;
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    line-height: 100%;
-}
-.nav-links :hover {
-    color:#E2725B;
-    transform: translateX(-5px);
- 
-}
-
-/* Left links alignment */
-.left-links {
-    justify-content: flex-start; /* Pushes items toward the logo */
-    padding-right: 15rem; /* Creates space before logo */
-    justify-content: space-between;
-    
-}
-
-/* Right links alignment */
-.right-links {
-    justify-content: flex-end; /* Pushes items toward the logo */
-    padding-left: 15rem; 
-    justify-content: space-between;
-}
-
-/* Hamburger menu */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
@@ -826,6 +776,7 @@ header {
     background-color: bisque;
     height: 627px;
 }
+
 /* Contact Section */
 .contact-legend {
     margin-bottom: 20px;
@@ -1008,7 +959,6 @@ header {
 }
 
 /* FAQ Section */
-
 .faq {
     background-color: var(--light-gray);
     margin-top: 0px;
@@ -1203,9 +1153,8 @@ header {
         0 0 8px rgba(255,255,255,0.3);
 }
 
-
 .community-img {
-  width: 57%; /* Relative width instead of fixed pixels */
+  width: 57%; /* Relative width*/
   max-width: 712.47px;
   height: auto; /* Maintain aspect ratio */
   border-radius: 60px;
@@ -1537,7 +1486,7 @@ header {
     flex-direction: column;
     justify-content: center; /* Vertical centering */
     align-items: start; /* Horizontal centering */
-    text-align: center; /* Center text for all child elements */
+    text-align: center; /* Centering text for all child elements */
   }
   .testimonial1 {
     scroll-snap-align: start;
@@ -1567,7 +1516,7 @@ header {
     flex-direction: column;
     justify-content: center; /* Vertical centering */
     align-items: center; /* Horizontal centering */
-    text-align: center; /* Center text for all child elements */
+    text-align: center; /* Centering text for all child elements */
   }
   
   .testimonial img {
@@ -2181,12 +2130,12 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 1rem 0.5rem; /* Slightly reduce padding */
+    padding: 1rem 0.5rem;
   }
   
   .navbar a {
-    padding: 12px 10px; /* Slightly tighter padding */
-    font-size: 15px; /* Slightly smaller font */
+    padding: 12px 10px; 
+    font-size: 15px;
   }
   
   .nav-links {
@@ -2248,10 +2197,10 @@ footer {
 }
   
   .logo {
-    font-size: 1.7rem; /* Slightly smaller logo */
+    font-size: 1.7rem; /* Size of logo */
   }
   
-  /* Optional: If you want to prevent text wrapping */
+  /*prevents text wrapping */
   .nav-links li a {
     white-space: wrap;
   }
