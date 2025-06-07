@@ -1,5 +1,7 @@
 
 :root {
+    --background: bisque;
+    --background: #E2725B;
     --primary: #4DB6AC;
     --secondary: #D7CCC8;
     --accent: #689F38;
