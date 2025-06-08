@@ -4,9 +4,8 @@ A modern, responsive website for a fitness center featuring services, resources,
 
 ### Color System
 
-**Primary Palette:**
-- `--background: #FFE4C4` (bisque) - Used for background and buttons
-- `--background: #E2725B` (Coral) - Hero section and key accents
+- `--background: #FFE4C4` (bisque) - Used for background, cards and buttons
+- `--background: #E2725B` (Coral) - Used for background, cards and buttons
 - `--accent: #689F38` (Green) - text
 - `--text:  #000000` (black) - Primary text color
 - `--white: #FFFFFF` - Background and card colors
